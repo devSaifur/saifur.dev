@@ -8,6 +8,7 @@ const ProfilePicture = () => {
         alt="Saifur Rahman"
         width={400}
         height={400}
+        priority={true}
         className="rounded-full border-4 border-neutral-500 bg-neutral-700"
       />
     </section>

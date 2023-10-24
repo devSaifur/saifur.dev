@@ -1,4 +1,5 @@
-import Blogs from '../components/Blogs'
+import { getSortedBlogsData } from '@/lib/blogs'
+import ListItem from '../components/ListItem'
 
 export const metadata = {
   title: "Saifur's blog",
@@ -6,9 +7,15 @@ export const metadata = {
 }
 
 const BlogPage = () => {
+  const blogs = getSortedBlogsData()
+
   return (
     <main>
-      <Blogs />
+      <h2>Blogs</h2>
+
+      {blogs.map((blog) => (
+        <ListItem blog={blog} key={blog.id} />
+      ))}
     </main>
   )
 }

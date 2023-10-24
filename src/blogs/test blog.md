@@ -1,5 +1,5 @@
 ---
-title: 'The end of 2023'
+title: 'test blog'
 date: '2023-10-23'
 ---
 
@@ -9,4 +9,3 @@ date: '2023-10-23'
 - [ ] Finish NextJS course before October ends
 - [ ] Finish first 21 day monk mode
 - [ ] Do proper research on freelancing market place
-- [ ] Earn $1
