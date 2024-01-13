@@ -1,0 +1,67 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import GitHub from "../components/logos/GItHub.astro";
+import LinkedIn from "../components/logos/LinkedIn.astro";
+import X from "../components/logos/X.astro";
+---
+
+<Layout title="Saifur Rahman">
+  <main class="flex flex-col gap-4">
+    <section>
+      <div>
+        <h1 class="text-3xl font-bold">Saifur Rahman</h1>
+        <h2 class="text-lg">Full-stack software engineer</h2>
+        <p>I do magic on the web, like mister Potter</p>
+      </div>
+  
+      <div class="flex">
+        <GitHub />
+        <LinkedIn />
+        <X />
+      </div>
+    </section>
+  
+    <section>
+      <h2>About</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate sint
+        repellendus optio incidunt ipsam deserunt! Explicabo sunt harum quam culpa
+        rerum exercitationem consequuntur officia necessitatibus? Expedita,
+        officia beatae! Explicabo, eveniet.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt odio
+        enim, incidunt sint quae nam officia laborum itaque, sapiente adipisci
+        dolorem voluptate, assumenda magni omnis quis ea temporibus rem quisquam!
+      </p>
+    </section>
+  
+    <section>
+      <h2>Projects</h2>
+      <div id="project-1">
+        <h3>project Titile</h3>
+        <p>Project description</p>
+        <div><span>React</span><span>TailwindCSS</span></div>
+        <Image
+          src="/src/assets/images/project-3.png"
+          width="200"
+          height="150"
+          alt="project-image-3"
+        />
+      </div>
+    </section>
+  
+    <section>
+      <h2>Writings</h2>
+      <p>Date</p>
+      <h3>Title</h3>
+    </section>
+  </main>
+
+  <footer>
+    Loosely designed in Figma and coded in Visual Studio Code by yours truly.
+    Built with Next.js and Tailwind CSS, deployed with Vercel. All text is set
+    in the Inter typeface.
+  </footer>
+</Layout>
