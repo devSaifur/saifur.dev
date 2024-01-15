@@ -8,32 +8,32 @@ import Arrow from "../components/logos/Arrow.astro";
 ---
 
 <Layout title="Saifur Rahman">
-  <div
-    class="relative mx-auto grid max-w-7xl gap-16 px-6 md:px-12 lg:grid-cols-2"
-  >
+  <div class="mx-auto grid max-w-7xl gap-16 px-6 md:px-12 lg:grid-cols-2">
     <header
-      class="flex flex-col items-center gap-4 lg:gap-8 pt-12 text-center lg:sticky lg:top-0 lg:h-screen lg:pt-20"
+      class="flex flex-col items-center gap-4 pt-12 text-center lg:sticky lg:top-0 lg:h-screen lg:gap-10 lg:py-36"
     >
       <Image
         src="/src/assets/images/profile-picture.jpg"
         width={150}
         height={150}
         alt="profile picture"
-        class="rounded-full border border-slate-500 lg:w-60 lg:h-60 lg:mx-auto"
+        class="rounded-full border border-slate-500 lg:mx-auto lg:h-60 lg:w-60"
       />
 
       <div class="space-y-2 lg:mx-auto lg:space-y-4">
-        <h1 class="text-3xl font-bold text-slate-50 lg:text-5xl">Saifur Rahman</h1>
-        <h2 class="text-lg font-medium lg:text-xl text-slate-100">
+        <h1 class="text-3xl font-bold text-slate-50 lg:text-5xl">
+          Saifur Rahman
+        </h1>
+        <h2 class="text-lg font-medium text-slate-100 lg:text-xl">
           Full-stack software engineer
         </h2>
         <p class="leading-normal">I do magic on the web, like mister Potter</p>
       </div>
 
-      <div class="flex gap-8 lg:mt-auto lg:mb-28">
-        <GitHub class="h-6 w-6 lg:h-8 lg:w-8 cursor-pointer" />
-        <LinkedIn class="h-6 w-6 lg:h-8 lg:w-8 cursor-pointer" />
-        <X class="h-6 w-6 lg:h-8 lg:w-8 cursor-pointer" />
+      <div class="flex gap-8 lg:gap-10 lg:pt-56">
+        <GitHub class="h-6 w-6 cursor-pointer lg:h-8 lg:w-8" />
+        <LinkedIn class="h-6 w-6 cursor-pointer lg:h-8 lg:w-8" />
+        <X class="h-6 w-6 cursor-pointer lg:h-8 lg:w-8" />
       </div>
     </header>
 
