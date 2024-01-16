@@ -5,6 +5,9 @@ import GitHub from "../components/logos/GItHub.astro";
 import LinkedIn from "../components/logos/LinkedIn.astro";
 import X from "../components/logos/X.astro";
 import Arrow from "../components/logos/Arrow.astro";
+
+import { getCollection } from "astro:content";
+const blogs = await getCollection("blogs");
 ---
 
 <Layout title="Saifur Rahman">
@@ -16,7 +19,7 @@ import Arrow from "../components/logos/Arrow.astro";
         src="/src/assets/images/profile-picture.jpg"
         width={150}
         height={150}
-        alt="profile picture"
+        alt="profile"
         class="rounded-full border border-slate-500 lg:mx-auto lg:h-60 lg:w-60"
       />
 
@@ -31,9 +34,21 @@ import Arrow from "../components/logos/Arrow.astro";
       </div>
 
       <div class="flex gap-8 lg:gap-10 lg:pt-56">
-        <GitHub class="h-6 w-6 cursor-pointer lg:h-8 lg:w-8" />
-        <LinkedIn class="h-6 w-6 cursor-pointer lg:h-8 lg:w-8" />
-        <X class="h-6 w-6 cursor-pointer lg:h-8 lg:w-8" />
+        <a target="_blank" href="http://github.com/devSaifur"
+          ><GitHub
+            class="h-6 w-6 cursor-pointer transition-all hover:text-slate-50 lg:h-8 lg:w-8 lg:text-slate-400"
+          /></a
+        >
+        <a target="_blank" href="http://linkedin.com/in/dev-saifur"
+          ><LinkedIn
+            class="h-6 w-6 cursor-pointer transition-all hover:text-slate-50 lg:h-8 lg:w-8 lg:text-slate-400"
+          /></a
+        >
+        <a target="_blank" href="http://x.com/devSaifur"
+          ><X
+            class="h-6 w-6 cursor-pointer transition-all hover:text-slate-50 lg:h-8 lg:w-8 lg:text-slate-400"
+          /></a
+        >
       </div>
     </header>
 
@@ -54,128 +69,162 @@ import Arrow from "../components/logos/Arrow.astro";
         </p>
       </section>
 
-      <section id="projects" class="space-y-10">
-        <h2 class="text-lg font-bold uppercase text-slate-100">Projects</h2>
-        <div class="flex flex-col gap-4 hover:shadow-primary md:flex-row">
-          <div class="flex flex-col gap-4 md:order-2 md:gap-2">
-            <h3 class="flex items-center font-medium text-slate-100">
-              Google Keep Clone <span class="ml-2"><Arrow /></span>
-            </h3>
-            <p class="text-sm text-slate-400">
-              A simple note-taking app inspired by Google Keep, built with
-              React, Tailwind CSS, and Firebase.
-            </p>
-            <ul class="space-x-2 text-teal-300">
-              <span
-                class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
-                >React</span
-              ><span
-                class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
-                >Tailwind CSS</span
-              ><span
-                class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
-                >Firebase</span
-              >
-            </ul>
-          </div>
-          <Image
-            src="/src/assets/images/project-3.png"
-            width="200"
-            height="150"
-            alt="project-image-3"
-            class="rounded-sm md:order-1"
-          />
-        </div>
+      <!-- PROJECTS -->
 
-        <div class="flex flex-col gap-4 hover:shadow-primary md:flex-row">
-          <div class="flex flex-col gap-4 md:order-2 md:gap-2">
-            <h3 class="flex items-center font-medium text-slate-100">
-              Google Keep Clone <span class="ml-2"><Arrow /></span>
-            </h3>
-            <p class="text-sm text-slate-400">
-              A simple note-taking app inspired by Google Keep, built with
-              React, Tailwind CSS, and Firebase.
-            </p>
-            <ul class="space-x-2 text-teal-300">
-              <span
-                class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
-                >React</span
-              ><span
-                class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
-                >Tailwind CSS</span
-              ><span
-                class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
-                >Firebase</span
-              >
-            </ul>
-          </div>
-          <Image
-            src="/src/assets/images/project-3.png"
-            width="200"
-            height="150"
-            alt="project-image-3"
-            class="rounded-sm md:order-1"
-          />
-        </div>
+      <section id="Projects" class="space-y-10">
+        <h2 class="pb-4 text-lg font-bold uppercase text-slate-100">
+          Projects
+        </h2>
 
-        <div class="flex flex-col gap-4 hover:shadow-primary md:flex-row">
-          <div class="flex flex-col gap-4 md:order-2 md:gap-2">
-            <h3 class="flex items-center font-medium text-slate-100">
-              Google Keep Clone <span class="ml-2"><Arrow /></span>
-            </h3>
-            <p class="text-sm text-slate-400">
-              A simple note-taking app inspired by Google Keep, built with
-              React, Tailwind CSS, and Firebase.
-            </p>
-            <ul class="space-x-2 text-teal-300">
-              <span
-                class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
-                >React</span
-              ><span
-                class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
-                >Tailwind CSS</span
-              ><span
-                class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
-                >Firebase</span
+        <a target="_blank" href="http://github.com/devSaifur/nasa-project">
+          <div
+            class="group/project flex flex-col gap-4 rounded-md py-4 md:flex-row lg:px-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/95 lg:hover:shadow-primary lg:hover:drop-shadow-lg"
+          >
+            <div class="flex flex-col space-y-2 md:order-2 md:gap-2">
+              <h3
+                class="flex items-center font-medium text-slate-100 group-hover/project:text-teal-300"
               >
-            </ul>
-          </div>
-          <Image
-            src="/src/assets/images/project-3.png"
-            width="200"
-            height="150"
-            alt="project-image-3"
-            class="rounded-sm"
-          />
-        </div>
+                Nasa Project <span
+                  class="ml-2 translate-y-px transition-transform group-hover/project:-translate-y-1 group-hover/project:translate-x-1 group-focus-visible/project:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none"
+                  ><Arrow /></span
+                >
+              </h3>
+              <p class="text-sm text-slate-400">
+                A space operation management app for NASA! It can schedule a new
+                mission and abort it if necessary. The front end is built with
+                React, the back end is with NodeJS, and the data is managed in
+                MongoDB.
+              </p>
+              <ul class="space-x-2 text-teal-300">
+                <span
+                  class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
+                  >React</span
+                ><span
+                  class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
+                  >Tailwind CSS</span
+                ><span
+                  class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
+                  >NodeJS</span
+                ><span
+                  class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
+                  >MongoDB</span
+                >
+              </ul>
+            </div>
+            <Image
+              src="/src/assets/images/project-1.png"
+              width="200"
+              height="150"
+              alt="project-1"
+              class="h-24 w-36 rounded-md md:order-1"
+            />
+          </div></a
+        >
+
+        <a target="_blank" href="http://github.com/devSaifur/the-wild-oasis">
+          <div
+            class="group/project flex flex-col gap-4 rounded-md py-4 md:flex-row lg:px-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/95 lg:hover:shadow-primary lg:hover:drop-shadow-lg"
+          >
+            <div class="flex flex-col space-y-2 md:order-2 md:gap-2">
+              <h3
+                class="flex items-center font-medium text-slate-100 group-hover/project:text-teal-300"
+              >
+                The Wild Oasis<span
+                  class="ml-2 translate-y-px transition-transform group-hover/project:-translate-y-1 group-hover/project:translate-x-1 group-focus-visible/project:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none"
+                  ><Arrow /></span
+                >
+              </h3>
+              <p class="text-sm text-slate-400">
+                A hotel insider app for the management team to manage the guests
+                and its customers, It's built with React, Styled Component, and
+                Supabase.
+              </p>
+              <ul class="space-x-2 text-teal-300">
+                <span
+                  class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
+                  >React</span
+                ><span
+                  class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
+                  >Styled Component</span
+                ><span
+                  class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
+                  >Supabase</span
+                >
+              </ul>
+            </div>
+            <Image
+              src="/src/assets/images/project-2.png"
+              width="200"
+              height="150"
+              alt="project-3"
+              class="h-24 w-36 rounded-md md:order-1"
+            />
+          </div></a
+        >
+
+        <a target="_blank" href="http://github.com/devSaifur/google-keep-clone">
+          <div
+            class="group/project flex flex-col gap-4 rounded-md py-4 md:flex-row lg:px-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/95 lg:hover:shadow-primary lg:hover:drop-shadow-lg"
+          >
+            <div class="flex flex-col space-y-2 md:order-2 md:gap-2">
+              <h3
+                class="flex items-center font-medium text-slate-100 group-hover/project:text-teal-300"
+              >
+                Google Keep Clone <span
+                  class="ml-2 translate-y-px transition-transform group-hover/project:-translate-y-1 group-hover/project:translate-x-1 group-focus-visible/project:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none"
+                  ><Arrow /></span
+                >
+              </h3>
+              <p class="text-sm text-slate-400">
+                A simple note-taking app inspired by Google Keep, built with
+                React, Tailwind CSS, and Firebase.
+              </p>
+              <ul class="space-x-2 text-teal-300">
+                <span
+                  class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
+                  >React</span
+                ><span
+                  class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
+                  >Tailwind CSS</span
+                ><span
+                  class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5"
+                  >Firebase</span
+                >
+              </ul>
+            </div>
+            <Image
+              src="/src/assets/images/project-3.png"
+              width="200"
+              height="150"
+              alt="project-3"
+              class="h-24 w-36 rounded-md md:order-1"
+            />
+          </div></a
+        >
       </section>
 
-      <section class="space-y-6">
-        <h2 class="text-lg font-bold uppercase text-slate-100">Blogs</h2>
-        <article>
-          <p>2024 Jan 6</p>
-          <h3 class="flex items-center text-lg text-slate-100">
-            6 things I learned throgh programming <span class="ml-2"
-              ><Arrow /></span
-            >
-          </h3>
-        </article>
-        <article>
-          <p>2024 Jan 6</p>
-          <h3 class="flex items-center text-lg text-slate-100">
-            6 things I learned throgh programming <span class="ml-2"
-              ><Arrow /></span
-            >
-          </h3>
-        </article>
-        <article>
-          <p>2024 Jan 6</p>
-          <h3 class="flex items-center text-lg text-slate-100">
-            6 things I learned throgh programming <span class="ml-2"
-              ><Arrow /></span
-            >
-          </h3>
-        </article>
+      <!-- BLOGS -->
+
+      <section id="Blogs" class="space-y-10">
+        <h2 class="pb-4 text-lg font-bold uppercase text-slate-100">Blogs</h2>
+        {
+          blogs.map((blog) => {
+            return (
+              <a href={`/blogs/${blog.slug}`}>
+                <div class="group/blog flex flex-col gap-2 rounded-md py-4 lg:px-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/95 lg:hover:shadow-primary lg:hover:drop-shadow-lg">
+                  <p>{blog.data.date}</p>
+                  <h3 class="flex items-center text-lg text-slate-100 group-hover/blog:text-teal-300">
+                    {blog.data.title}
+                    <span class="ml-2 translate-y-px transition-transform group-hover/blog:-translate-y-1 group-hover/blog:translate-x-1 group-focus-visible/blog:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none">
+                      <Arrow />
+                    </span>
+                  </h3>
+                  <p class="line-clamp-2">{blog.body}</p>
+                </div>
+              </a>
+            );
+          })
+        }
       </section>
 
       <footer class="pb-12 pt-16 text-sm text-slate-400">

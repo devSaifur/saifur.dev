@@ -7,10 +7,9 @@ export default {
         primary: ["Inter", "sans-serif"],
       },
       boxShadow: {
-        primary:
-          "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
+        primary: "inset_0_1px_0_0_rgba(148,163,184,0.1)",
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
