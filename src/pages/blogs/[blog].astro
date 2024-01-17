@@ -26,7 +26,9 @@ const { Content } = await blog.render();
 ---
 
 <Layout title={blog.data.title}>
-  <main class="mx-auto flex max-w-7xl flex-col py-20 pl-60">
+  <main
+    class="mx-auto flex max-w-7xl flex-col px-8 py-8 md:px-14 md:py-12 lg:py-20 lg:pl-60"
+  >
     <article
       class="prose lg:prose-xl prose-h2:text-slate-300 prose-p:text-slate-300"
     >
