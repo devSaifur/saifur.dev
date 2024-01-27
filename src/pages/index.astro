@@ -1,12 +1,14 @@
 ---
-import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import GitHub from "../components/logos/GItHub.astro";
-import LinkedIn from "../components/logos/LinkedIn.astro";
-import X from "../components/logos/X.astro";
-import Arrow from "../components/logos/Arrow.astro";
-
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
+
+import ProfilePicture from "../images/profile-picture.jpg";
+import ProjectImage1 from "../images/project-1.png";
+import ProjectImage2 from "../images/project-2.png";
+import ProjectImage3 from "../images/project-3.png";
+
 const blogs = await getCollection("blogs");
 ---
 
@@ -16,13 +18,10 @@ const blogs = await getCollection("blogs");
       class="flex flex-col items-center gap-4 pt-12 text-center lg:sticky lg:top-0 lg:h-screen lg:gap-10 lg:py-36"
     >
       <Image
-        src="/images/profile-picture.jpg"
-        width={150}
-        height={150}
+        src={ProfilePicture}
         alt="profile"
-        class="rounded-full border border-slate-500 lg:mx-auto lg:h-60 lg:w-60"
+        class="rounded-full border border-slate-500 lg:mx-auto h-36 w-36 lg:h-60 lg:w-60"
       />
-
       <div class="space-y-2 lg:mx-auto lg:space-y-4">
         <h1 class="text-3xl font-bold text-slate-50 lg:text-5xl">
           Saifur Rahman
@@ -35,17 +34,20 @@ const blogs = await getCollection("blogs");
 
       <div class="flex gap-8 lg:gap-10 lg:pt-56">
         <a target="_blank" href="http://github.com/devSaifur"
-          ><GitHub
+          ><Icon
+            name="github"
             class="h-6 w-6 cursor-pointer transition-all hover:text-slate-50 lg:h-8 lg:w-8 lg:text-slate-400"
           /></a
         >
         <a target="_blank" href="http://linkedin.com/in/dev-saifur"
-          ><LinkedIn
+          ><Icon
+            name="linkedin"
             class="h-6 w-6 cursor-pointer transition-all hover:text-slate-50 lg:h-8 lg:w-8 lg:text-slate-400"
           /></a
         >
         <a target="_blank" href="http://x.com/devSaifur"
-          ><X
+          ><Icon
+            name="x"
             class="h-6 w-6 cursor-pointer transition-all hover:text-slate-50 lg:h-8 lg:w-8 lg:text-slate-400"
           /></a
         >
@@ -85,7 +87,7 @@ const blogs = await getCollection("blogs");
               >
                 Nasa Project <span
                   class="ml-2 translate-y-px transition-transform group-hover/project:-translate-y-1 group-hover/project:translate-x-1 group-focus-visible/project:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none"
-                  ><Arrow /></span
+                  ><Icon name="arrow" /></span
                 >
               </h3>
               <p class="text-sm text-slate-400">
@@ -111,9 +113,7 @@ const blogs = await getCollection("blogs");
               </ul>
             </div>
             <Image
-              src="/images/project-1.png"
-              width="200"
-              height="150"
+              src={ProjectImage1}
               alt="project-1"
               class="h-24 w-36 rounded-md md:order-1"
             />
@@ -130,7 +130,7 @@ const blogs = await getCollection("blogs");
               >
                 The Wild Oasis<span
                   class="ml-2 translate-y-px transition-transform group-hover/project:-translate-y-1 group-hover/project:translate-x-1 group-focus-visible/project:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none"
-                  ><Arrow /></span
+                  ><Icon name="arrow" /></span
                 >
               </h3>
               <p class="text-sm text-slate-400">
@@ -152,9 +152,7 @@ const blogs = await getCollection("blogs");
               </ul>
             </div>
             <Image
-              src="/images/project-2.png"
-              width="200"
-              height="150"
+              src={ProjectImage2}
               alt="project-3"
               class="h-24 w-36 rounded-md md:order-1"
             />
@@ -171,7 +169,7 @@ const blogs = await getCollection("blogs");
               >
                 Google Keep Clone <span
                   class="ml-2 translate-y-px transition-transform group-hover/project:-translate-y-1 group-hover/project:translate-x-1 group-focus-visible/project:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none"
-                  ><Arrow /></span
+                  ><Icon name="arrow" /></span
                 >
               </h3>
               <p class="text-sm text-slate-400">
@@ -192,9 +190,7 @@ const blogs = await getCollection("blogs");
               </ul>
             </div>
             <Image
-              src="/images/project-3.png"
-              width="200"
-              height="150"
+              src={ProjectImage3}
               alt="project-3"
               class="h-24 w-36 rounded-md md:order-1"
             />
@@ -215,7 +211,7 @@ const blogs = await getCollection("blogs");
                   <h3 class="flex items-center text-lg text-slate-100 group-hover/blog:text-teal-300">
                     {blog.data.title}
                     <span class="ml-2 translate-y-px transition-transform group-hover/blog:-translate-y-1 group-hover/blog:translate-x-1 group-focus-visible/blog:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none">
-                      <Arrow />
+                      <Icon name="arrow" />
                     </span>
                   </h3>
                   <p class="line-clamp-2">{blog.body}</p>
@@ -243,9 +239,9 @@ const blogs = await getCollection("blogs");
   <!-- mouse trailer -->
   <div
     id="trailer"
-    class="pointer-events-none fixed left-0 top-0 z-50 hidden lg:grid h-12 w-12 place-items-center rounded-full bg-teal-300 blur-2xl transition-opacity delay-500"
+    class="pointer-events-none fixed left-0 top-0 z-50 hidden h-12 w-12 place-items-center rounded-full bg-teal-300 blur-2xl transition-opacity delay-500 lg:grid"
   >
   </div>
 </Layout>
 
-<script src="/src/scripts/trailer.ts"></script>
+<script src="/src/scripts/mouseTrailer.ts"></script>
