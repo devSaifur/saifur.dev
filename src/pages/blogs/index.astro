@@ -15,7 +15,7 @@ const blogs = await getCollection("blogs");
               <p>{blog.data.date}</p>
               <h3 class="flex items-center text-lg text-slate-100 group-hover/blog:text-teal-300">
                 {blog.data.title}
-                <span class="ml-2 translate-y-px transition-transform group-hover/blog:-translate-y-1 group-hover/blog:translate-x-1 group-focus-visible/blog:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none">
+                <span aria-hidden="true" class="ml-2 translate-y-px transition-transform group-hover/blog:-translate-y-1 group-hover/blog:translate-x-1 group-focus-visible/blog:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none">
                   <Icon name="arrow" />
                 </span>
               </h3>
