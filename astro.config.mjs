@@ -7,5 +7,7 @@ import icon from 'astro-icon'
 export default defineConfig({
   integrations: [tailwind(), icon()],
   output: 'server',
-  adapter: vercel(),
+  adapter: vercel({
+    imageService: true,
+  }),
 })
