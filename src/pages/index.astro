@@ -1,17 +1,17 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import { Image } from "astro:assets";
-import { Icon } from "astro-icon/components";
-import { getCollection } from "astro:content";
+import Layout from '../layouts/Layout.astro'
+import { Image } from 'astro:assets'
+import { Icon } from 'astro-icon/components'
+import { getCollection } from 'astro:content'
 
-import ProfilePicture from "../images/profile-picture.jpg";
-import ProjectImage1 from "../images/project-1.png";
-import ProjectImage2 from "../images/project-2.png";
-import ProjectImage3 from "../images/project-3.png";
+import ProfilePicture from '../images/profile-picture.webp'
+import ProjectImage1 from '../images/project-1.png'
+import ProjectImage2 from '../images/project-2.png'
+import ProjectImage3 from '../images/project-3.png'
 
 export const prerender = true
 
-const blogs = await getCollection("blogs");
+const blogs = await getCollection('blogs')
 ---
 
 <Layout title="Saifur Rahman">
@@ -231,7 +231,7 @@ const blogs = await getCollection("blogs");
                   <p class="line-clamp-2">{blog.body}</p>
                 </div>
               </a>
-            );
+            )
           })
         }
       </section>
