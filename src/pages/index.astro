@@ -22,7 +22,7 @@ const blogs = await getCollection('blogs')
       <Image
         src={ProfilePicture}
         alt="profile"
-        class="h-36 w-36 rounded-full border border-slate-500 lg:mx-auto lg:h-60 lg:w-60"
+        class="size-36 rounded-full border border-slate-500 lg:mx-auto lg:size-60"
       />
       <div class="space-y-2 lg:mx-auto lg:space-y-4">
         <h1 class="text-3xl font-bold text-slate-50 lg:text-5xl">
@@ -38,27 +38,27 @@ const blogs = await getCollection('blogs')
         class="flex gap-8 lg:gap-10 lg:pt-56"
         aria-label="social links section"
       >
-        <a target="_blank" href="http://github.com/devSaifur"
-          ><Icon
+        <a target="_blank" href="http://github.com/devSaifur">
+          <label class="sr-only">Github social link</label>
+          <Icon
             name="github"
-            class="h-6 w-6 cursor-pointer transition-all hover:text-slate-50 lg:h-8 lg:w-8 lg:text-slate-400"
-            aria-label="github link"
+            class="size-6 cursor-pointer transition-all hover:text-slate-50 lg:size-8 lg:text-slate-400"
           /></a
         >
-        <a target="_blank" href="http://linkedin.com/in/dev-saifur"
-          ><Icon
+        <a target="_blank" href="http://linkedin.com/in/dev-saifur">
+          <label class="sr-only">Linkedin social link</label>
+          <Icon
             name="linkedin"
-            class="h-6 w-6 cursor-pointer transition-all hover:text-slate-50 lg:h-8 lg:w-8 lg:text-slate-400"
-            aria-label="linkedin link"
+            class="size-6 cursor-pointer transition-all hover:text-slate-50 lg:size-8 lg:text-slate-400"
           /></a
         >
-        <a target="_blank" href="http://x.com/devSaifur"
-          ><Icon
+        <a target="_blank" href="http://x.com/devSaifur">
+          <label class="sr-only">X, formaly Twitter social link</label>
+          <Icon
             name="x"
-            class="h-6 w-6 cursor-pointer transition-all hover:text-slate-50 lg:h-8 lg:w-8 lg:text-slate-400"
-            aria-label="x link"
-          /></a
-        >
+            class="size-6 cursor-pointer transition-all hover:text-slate-50 lg:size-8 lg:text-slate-400"
+          />
+        </a>
       </div>
     </header>
 
@@ -249,13 +249,4 @@ const blogs = await getCollection('blogs')
       </footer>
     </main>
   </div>
-
-  <!-- mouse trailer -->
-  <div
-    id="trailer"
-    class="pointer-events-none fixed left-0 top-0 z-50 hidden h-12 w-12 place-items-center rounded-full bg-teal-300 blur-2xl transition-opacity delay-500 lg:grid"
-  >
-  </div>
 </Layout>
-
-<script aria-hidden="true" src="/src/scripts/mouseTrailer.ts"></script>
