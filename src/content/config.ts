@@ -9,5 +9,5 @@ const blogCollection = defineCollection({
 })
 
 export const collections = {
-  blogs: blogCollection,
+  blog: blogCollection,
 }

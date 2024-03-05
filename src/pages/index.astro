@@ -11,7 +11,7 @@ import ProjectImage3 from '../images/project-3.png'
 
 export const prerender = true
 
-const blogs = await getCollection('blogs')
+const blogs = await getCollection('blog')
 ---
 
 <Layout title="Saifur Rahman">
@@ -216,7 +216,7 @@ const blogs = await getCollection('blogs')
         {
           blogs.map((blog) => {
             return (
-              <a href={`/blogs/${blog.slug}`}>
+              <a href={`/blog/${blog.slug}`}>
                 <div class="group/blog flex flex-col gap-2 rounded-md py-4 lg:px-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/95 lg:hover:shadow-primary lg:hover:drop-shadow-lg">
                   <p>{blog.data.date}</p>
                   <h3 class="flex items-center text-lg text-slate-100 group-hover/blog:text-teal-300">
