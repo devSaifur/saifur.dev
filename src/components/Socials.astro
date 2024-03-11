@@ -1,0 +1,19 @@
+---
+import { Icon } from 'astro-icon/components'
+
+import { socialLinks } from '../configs'
+---
+
+<ul class="flex gap-8 lg:gap-10 lg:pt-56" aria-label="social links section">
+  {
+    socialLinks.map((socialLink) => (
+      <a target="_blank" href={socialLink.href}>
+        <label class="sr-only">{socialLink.label}</label>
+        <Icon
+          name={socialLink.icon}
+          class="size-6 cursor-pointer transition-all hover:text-slate-50 lg:size-8 lg:text-slate-400"
+        />
+      </a>
+    ))
+  }
+</ul>

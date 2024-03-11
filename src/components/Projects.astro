@@ -1,0 +1,46 @@
+---
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+
+import { projects } from '../configs/index'
+---
+
+<section id="Projects" class="space-y-10">
+  <h2 class="pb-4 text-lg font-bold uppercase text-slate-100">Projects</h2>
+  {
+    projects.map((project) => (
+      <a target="_blank" href={project.href}>
+        <div class="group/project flex flex-col gap-4 rounded-md py-4 md:flex-row lg:px-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/95 lg:hover:shadow-primary lg:hover:drop-shadow-lg">
+          <div class="flex flex-col space-y-2 md:order-2 md:gap-2">
+            <h3 class="flex items-center font-medium text-slate-100 group-hover/project:text-teal-300">
+              {project.name}{' '}
+              <span
+                aria-hidden="true"
+                class="ml-2 translate-y-px transition-transform group-hover/project:-translate-y-1 group-hover/project:translate-x-1 group-focus-visible/project:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none"
+              >
+                <Icon name="arrow" />
+              </span>
+            </h3>
+            <p class="text-sm text-slate-400">{project.details}</p>
+            <ul class="space-x-2 space-y-2 text-teal-300">
+              <>
+                {project.technologies.map((technology) => (
+                  <span class="rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5">
+                    {technology}
+                  </span>
+                ))}
+              </>
+            </ul>
+          </div>
+          <Image
+            src={project.image}
+            width="200"
+            height="150"
+            alt={project.name}
+            class="h-24 w-36 rounded-md md:order-1"
+          />
+        </div>
+      </a>
+    ))
+  }
+</section>

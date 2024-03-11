@@ -17,12 +17,6 @@ const { title } = Astro.props
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
 
-    <script
-      is:inline
-      defer
-      src="https://cdn.jsdelivr.net/npm/@loglib/tracker@latest/dist/index.global.js"
-      data-id="saifur_vercel"></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,7 +27,7 @@ const { title } = Astro.props
     <ViewTransitions />
   </head>
   <body
-    class="min-w-0 scroll-smooth bg-slate-900 font-primary text-base text-slate-300 antialiased"
+    class="min-h-screen scroll-smooth bg-slate-900 font-primary text-base text-slate-300 antialiased"
   >
     <slot />
   </body>
