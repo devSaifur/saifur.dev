@@ -7,15 +7,19 @@ import Projects from '../components/Projects.astro'
 import Blogs from '../components/Blogs.astro'
 import Footer from '../components/Footer.astro'
 import About from '../components/About.astro'
+import Skills from '../components/Skills.astro'
 
 export const prerender = true
 ---
 
-<Layout title="Saifur Rahman">
+<Layout title='Saifur Rahman'>
   <Wrapper>
     <Header />
-    <main class="grid gap-16 lg:pt-20">
+    <main class='grid gap-16 lg:pt-20'>
       <About />
+
+      <!-- TECHNOLOGIES -->
+      <Skills />
 
       <!-- PROJECTS -->
       <Projects />
