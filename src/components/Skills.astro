@@ -4,78 +4,143 @@ import { Icon } from 'astro-icon/components'
 
 <section>
   <h2 class='pb-4 text-lg font-bold uppercase text-slate-100'>Skills</h2>
-  <div class='flex rounded-md bg-teal-400/10 py-4'>
+  <div
+    class='col-span-4 grid grid-flow-col grid-rows-3 rounded-md bg-teal-400/10 py-4 sm:grid-rows-2'
+  >
+    <span class='flex flex-col items-center gap-y-1'>
+      <Icon
+        aria-hidden='true'
+        class='size-5 text-[#E34F26] sm:size-6'
+        name='html'
+      />
+      <span
+        class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
+        >HTML
+      </span>
+    </span>
+
+    <span class='flex flex-col items-center gap-y-1'>
+      <Icon
+        aria-hidden='true'
+        class='size-5 text-[#1572B6] sm:size-6'
+        name='html'
+      />
+      <span
+        class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
+        >CSS
+      </span>
+    </span>
+
     <span aria-hidden='true' class='flex flex-col items-center gap-y-1'>
-      <Icon class='size-8 text-[#F7DF1E]' name='javascript' />
+      <Icon class='size-5 text-[#F7DF1E] sm:size-6' name='javascript' />
       <span
         class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
         >Javascript
       </span>
     </span>
-    <span aria-hidden='true' class='flex flex-col items-center gap-y-1'>
-      <Icon class='size-8 text-[#06B6D4]' name='tailwind' />
+
+    <span class='flex flex-col items-center gap-y-1'>
+      <Icon class='size-5 text-[#06B6D4] sm:size-6' name='tailwind' />
       <span
         class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
         >Tawilwind
       </span>
     </span>
-    <span aria-hidden='true' class='flex flex-col items-center gap-y-1'>
-      <Icon class='size-8 text-[#61DAFB]' name='react' />
+
+    <span class='flex flex-col items-center gap-y-1'>
+      <Icon
+        aria-hidden='true'
+        class='size-5 text-[#61DAFB] sm:size-6'
+        name='react'
+      />
       <span
         class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
         >React
       </span>
     </span>
-    <span aria-hidden='true' class='flex flex-col items-center gap-y-1'>
-      <Icon class='size-8 text-[#3178C6]' name='typescript' />
+
+    <span class='flex flex-col items-center gap-y-1'>
+      <Icon
+        aria-hidden='true'
+        class='size-5 text-[#3178C6] sm:size-6'
+        name='typescript'
+      />
       <span
         class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
         >Typescript
       </span>
     </span>
-    <span aria-hidden='true' class='flex flex-col items-center gap-y-1'>
-      <Icon class='size-8 text-[#339933]' name='node' />
+
+    <span class='flex flex-col items-center gap-y-1'>
+      <Icon
+        aria-hidden='true'
+        class='size-5 text-[#339933] sm:size-6'
+        name='node'
+      />
       <span
         class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
         >Node.js
       </span>
     </span>
-    <span aria-hidden='true' class='flex flex-col items-center gap-y-1'>
-      <Icon class='size-8 text-[#000000]' name='express' />
+
+    <span class='flex flex-col items-center gap-y-1'>
+      <Icon
+        aria-hidden='true'
+        class='size-5 text-[#000000] sm:size-6'
+        name='express'
+      />
       <span
         class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
         >Express
       </span>
     </span>
-    <span aria-hidden='true' class='flex flex-col items-center gap-y-1'>
-      <Icon class='size-8 text-[#47A248]' name='mongodb' />
+
+    <span class='flex flex-col items-center gap-y-1'>
+      <Icon
+        aria-hidden='true'
+        class='size-5 text-[#47A248] sm:size-6'
+        name='mongodb'
+      />
       <span
         class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
         >MondoDB
       </span>
     </span>
-    <span aria-hidden='true' class='flex flex-col items-center gap-y-1'>
-      <Icon class='size-8 text-[#000000]' name='next' />
+
+    <span class='flex flex-col items-center gap-y-1'>
+      <Icon
+        aria-hidden='true'
+        class='size-5 text-[#000000] sm:size-6'
+        name='next'
+      />
       <span
         class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
         >Next.js
       </span>
     </span>
-    <span aria-hidden='true' class='flex flex-col items-center gap-y-1'>
-      <Icon class='size-8 text-[#4479A1]' name='mysql' />
+
+    <span class='flex flex-col items-center gap-y-1'>
+      <Icon
+        aria-hidden='true'
+        class='size-5 text-[#4479A1] sm:size-6'
+        name='mysql'
+      />
       <span
         class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
         >MySQL
       </span>
     </span>
-    <span aria-hidden='true' class='flex flex-col items-center gap-y-1'>
-      <Icon class='size-8 text-[#4169E1]' name='postgresql' />
+
+    <span class='flex flex-col items-center gap-y-1'>
+      <Icon
+        aria-hidden='true'
+        class='size-5 text-[#4169E1] sm:size-6'
+        name='postgresql'
+      />
       <span
         class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
         >PostgreSQL
       </span>
     </span>
   </div>
-
-  <p class='line-clamp-2'></p>
 </section>

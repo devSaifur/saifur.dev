@@ -4,16 +4,26 @@ import { Icon } from 'astro-icon/components'
 import { socialLinks } from '../configs'
 ---
 
-<ul class="flex gap-8 lg:gap-10 lg:pt-56" aria-label="social links section">
-  {
-    socialLinks.map((socialLink) => (
-      <a target="_blank" href={socialLink.href}>
-        <label class="sr-only">{socialLink.label}</label>
-        <Icon
-          name={socialLink.icon}
-          class="size-6 cursor-pointer transition-all hover:text-slate-50 lg:size-8 lg:text-slate-400"
-        />
-      </a>
-    ))
-  }
-</ul>
+<div class='grid gap-8 lg:pt-48'>
+  <ul
+    class='flex items-center justify-center gap-8 lg:gap-10'
+    aria-label='social links section'
+  >
+    {
+      socialLinks.map((socialLink) => (
+        <a target='_blank' href={socialLink.href}>
+          <label class='sr-only'>{socialLink.label}</label>
+          <Icon
+            name={socialLink.icon}
+            class='size-6 cursor-pointer transition-all hover:text-slate-50 lg:size-8 lg:text-slate-400'
+          />
+        </a>
+      ))
+    }
+    <button
+      class='focus-visible:ring-ring inline-flex items-center justify-center whitespace-nowrap rounded-md bg-slate-700 px-4 py-2 text-xs font-medium shadow transition-colors hover:bg-slate-700/90 focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 sm:text-sm'
+    >
+      <Icon class='mr-1 size-4' name='download' />CV</button
+    >
+  </ul>
+</div>
