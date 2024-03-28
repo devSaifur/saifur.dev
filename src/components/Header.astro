@@ -11,6 +11,7 @@ import SocialLinks from './Socials.astro'
   <Image
     src={ProfilePicture}
     alt='profile'
+    sizes={`(max-width: 360px) 15vw, (max-width: 720px) 30vw, (max-width: 1600px) 30vw, 30vw`}
     class='size-36 rounded-full border border-slate-500 lg:mx-auto lg:size-60'
   />
   <div class='space-y-2 lg:mx-auto lg:space-y-4'>
