@@ -12,6 +12,13 @@ import Skills from '../components/Skills.astro'
 export const prerender = true
 ---
 
+<script>
+  import { loglib } from '@loglib/tracker'
+  loglib.record({
+    id: 'saifur_pages',
+  })
+</script>
+
 <Layout title='Saifur Rahman'>
   <Wrapper>
     <Header />
