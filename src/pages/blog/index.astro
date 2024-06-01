@@ -1,29 +1,29 @@
 ---
+import ArrowIcon from '../../icons/ArrowIcon.astro'
 import Layout from '../../layouts/Layout.astro'
 import { getCollection } from 'astro:content'
-import { Icon } from 'astro-icon/components'
 
 const blogs = await getCollection('blog')
 ---
 
-<Layout title="Blogs">
-  <main class="mx-auto max-w-2xl py-16">
+<Layout title='Blogs'>
+  <main class='mx-auto max-w-2xl py-16'>
     {
       blogs.map((blog) => {
         return (
           <a href={`/blog/${blog.slug}`}>
-            <div class="group/blog flex flex-col gap-2 rounded-md py-4 lg:px-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/95 lg:hover:shadow-primary lg:hover:drop-shadow-lg">
+            <div class='group/blog flex flex-col gap-2 rounded-md py-4 lg:px-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/95 lg:hover:shadow-primary lg:hover:drop-shadow-lg'>
               <p>{blog.data.date}</p>
-              <h3 class="flex items-center text-lg text-slate-100 group-hover/blog:text-teal-300">
+              <h3 class='flex items-center text-lg text-slate-100 group-hover/blog:text-teal-300'>
                 {blog.data.title}
                 <span
-                  aria-hidden="true"
-                  class="ml-2 translate-y-px transition-transform group-hover/blog:-translate-y-1 group-hover/blog:translate-x-1 group-focus-visible/blog:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none"
+                  aria-hidden='true'
+                  class='ml-2 translate-y-px transition-transform group-hover/blog:-translate-y-1 group-hover/blog:translate-x-1 group-focus-visible/blog:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none'
                 >
-                  <Icon name="arrow" />
+                  <ArrowIcon />
                 </span>
               </h3>
-              <p class="line-clamp-2">{blog.body}</p>
+              <p class='line-clamp-2'>{blog.body}</p>
             </div>
           </a>
         )
