@@ -4,12 +4,52 @@ import { Image } from 'astro:assets'
 import TheNextStore from '../images/the-next-store.webp'
 import NasaMissionControl from '../images/nasa-mission-control.webp'
 import TheWildOasis from '../images/the-wild-oasis.webp'
+import AskPdf from '../images/ask-pdf.webp'
 import ArrowIcon from '../icons/ArrowIcon.astro'
 ---
 
 <section id='Projects' class='space-y-10'>
   <h2 class='pb-4 text-lg font-bold uppercase text-slate-100'>Projects</h2>
-  <a target='_blank' href='https://github.com/devSaifur/the-next-shop'>
+  <a target='_blank' href='https://github.com/devSaifur/ask-pdf'>
+    <div
+      class='group/project flex flex-col gap-4 rounded-md py-4 md:flex-row lg:px-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/95 lg:hover:shadow-primary lg:hover:drop-shadow-lg'
+    >
+      <div class='flex flex-col space-y-2 md:order-2 md:gap-2'>
+        <h3
+          class='flex items-center font-medium text-slate-100 group-hover/project:text-teal-300'
+        >
+          Ask PDF{' '}
+          <span
+            aria-hidden='true'
+            class='ml-2 translate-y-px transition-transform group-hover/project:-translate-y-1 group-hover/project:translate-x-1 group-focus-visible/project:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none'
+          >
+            <ArrowIcon />
+          </span>
+        </h3>
+        <p class='text-justify text-sm text-slate-400'>
+          Ask PDF allows you to have conversations with any PDF document. Simply
+          upload your file and start asking questions with the power of ai right
+          away.
+        </p>
+        <ul
+          class='space-x-2 space-y-2 text-teal-300 *:rounded-full *:bg-teal-400/10 *:px-3 *:py-1 *:text-xs *:font-medium *:leading-5'
+        >
+          <span>Next.js </span>
+          <span>Typescript </span>
+          <span>Tailwind</span>
+          <span>PostgreSQL </span>
+        </ul>
+      </div>
+      <Image
+        src={AskPdf}
+        width='200'
+        height='150'
+        alt='The Next Shop'
+        class='h-24 w-36 rounded-md object-fill md:order-1'
+      />
+    </div>
+  </a>
+  <a target='_blank' href='https://github.com/devSaifur/the-next-dashboard'>
     <div
       class='group/project flex flex-col gap-4 rounded-md py-4 md:flex-row lg:px-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/95 lg:hover:shadow-primary lg:hover:drop-shadow-lg'
     >
@@ -30,25 +70,13 @@ import ArrowIcon from '../icons/ArrowIcon.astro'
           dashboard store owners have the ability to mange products, view sells
           details and even customize how the store front looks
         </p>
-        <ul class='space-x-2 space-y-2 text-teal-300'>
-          <>
-            <span
-              class='rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5'
-              >Next.js
-            </span>
-            <span
-              class='rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5'
-              >Typescript
-            </span>
-            <span
-              class='rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5'
-              >Tailwind
-            </span>
-            <span
-              class='rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5'
-              >PostgreSQL
-            </span>
-          </>
+        <ul
+          class='space-x-2 space-y-2 text-teal-300 *:rounded-full *:bg-teal-400/10 *:px-3 *:py-1 *:text-xs *:font-medium *:leading-5'
+        >
+          <span>Next.js </span>
+          <span>Typescript </span>
+          <span>Tailwind </span>
+          <span>PostgreSQL </span>
         </ul>
       </div>
       <Image
@@ -56,7 +84,7 @@ import ArrowIcon from '../icons/ArrowIcon.astro'
         width='200'
         height='150'
         alt='The Next Shop'
-        class='h-24 w-36 rounded-md md:order-1'
+        class='h-24 w-36 rounded-md object-fill md:order-1'
       />
     </div>
   </a>
@@ -81,25 +109,13 @@ import ArrowIcon from '../icons/ArrowIcon.astro'
           mission and abort it if necessary. The front end is built with React,
           the back end is with NodeJS, and the data is managed in MongoDB.
         </p>
-        <ul class='space-x-2 space-y-2 text-teal-300'>
-          <>
-            <span
-              class='rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5'
-              >React.js
-            </span>
-            <span
-              class='rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5'
-              >Node
-            </span>
-            <span
-              class='rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5'
-              >Tailwind
-            </span>
-            <span
-              class='rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5'
-              >Mongodb
-            </span>
-          </>
+        <ul
+          class='space-x-2 space-y-2 text-teal-300 *:rounded-full *:bg-teal-400/10 *:px-3 *:py-1 *:text-xs *:font-medium *:leading-5'
+        >
+          <span>React.js </span>
+          <span>Node </span>
+          <span>Tailwind </span>
+          <span>Mongodb </span>
         </ul>
       </div>
       <Image
@@ -107,7 +123,7 @@ import ArrowIcon from '../icons/ArrowIcon.astro'
         width='200'
         height='150'
         alt='The Next Shop'
-        class='h-24 w-36 rounded-md md:order-1'
+        class='h-24 w-36 rounded-md object-fill md:order-1'
       />
     </div>
   </a>
@@ -131,21 +147,12 @@ import ArrowIcon from '../icons/ArrowIcon.astro'
           A hotel insider app for the management team to manage the guests and
           its customers, It's built with React, Styled Component, and Supabase.
         </p>
-        <ul class='space-x-2 space-y-2 text-teal-300'>
-          <>
-            <span
-              class='rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5'
-              >React.js
-            </span>
-            <span
-              class='rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5'
-              >Styled Component
-            </span>
-            <span
-              class='rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5'
-              >Supabase
-            </span>
-          </>
+        <ul
+          class='space-x-2 space-y-2 text-teal-300 *:rounded-full *:bg-teal-400/10 *:px-3 *:py-1 *:text-xs *:font-medium *:leading-5'
+        >
+          <span>React.js </span>
+          <span>Styled Component </span>
+          <span>Supabase </span>
         </ul>
       </div>
       <Image
@@ -153,7 +160,7 @@ import ArrowIcon from '../icons/ArrowIcon.astro'
         width='200'
         height='150'
         alt='The Next Shop'
-        class='h-24 w-36 rounded-md md:order-1'
+        class='h-24 w-36 rounded-md object-fill md:order-1'
       />
     </div>
   </a>
