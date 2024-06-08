@@ -6,7 +6,10 @@ import { getCollection } from 'astro:content'
 const blogs = await getCollection('blog')
 ---
 
-<Layout title='Blogs'>
+<Layout
+  title='Blogs'
+  description='Blogs of Saifur Rahman, a full-stack web developer.'
+>
   <main class='mx-auto max-w-2xl py-16'>
     {
       blogs.map((blog) => {
