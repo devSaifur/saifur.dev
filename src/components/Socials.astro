@@ -23,9 +23,29 @@ import DownloadIcon from '../icons/DownloadIcon.astro'
       <XIcon />
     </a>
     <button
+      id='download-cv'
       class='focus-visible:ring-ring inline-flex items-center justify-center whitespace-nowrap rounded-md bg-slate-700 px-4 py-2 text-xs font-medium shadow transition-colors hover:bg-slate-700/90 focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 sm:text-sm'
     >
       <DownloadIcon />CV</button
     >
   </ul>
 </div>
+
+<script is:inline>
+  document.getElementById('download-cv').addEventListener('click', () => {
+    const url =
+      'https://cdn.jsdelivr.net/gh/devSaifur/saifur.dev/public/assets/Saifur%20Rahman%20(CV).pdf'
+
+    fetch(url)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const link = document.createElement('a')
+        link.href = URL.createObjectURL(blob)
+        link.download = 'Saifur Rahman (CV).pdf'
+        document.body.appendChild(link)
+        link.click()
+        document.body.removeChild(link)
+      })
+      .catch((error) => console.error('Error downloading the file:', error))
+  })
+</script>
