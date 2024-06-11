@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
-    "@astrojs/cloudflare": "^10.3.0",
+    "@astrojs/cloudflare": "^10.4.0",
     "@astrojs/sitemap": "^3.1.5",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/geist-sans": "^5.0.3",
@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.13",
-    "prettier": "^3.3.1",
+    "prettier": "^3.3.2",
     "prettier-plugin-astro": "^0.14.0",
     "prettier-plugin-tailwindcss": "^0.6.2",
     "sharp": "^0.33.4",
