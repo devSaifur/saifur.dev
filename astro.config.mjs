@@ -7,7 +7,9 @@ import sitemap from '@astrojs/sitemap'
 export default defineConfig({
   integrations: [tailwind(), sitemap()],
   output: 'server',
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    imageService: 'passthrough',
+  }),
   site: 'https://saifur.pages.dev',
   prefetch: {
     defaultStrategy: 'viewport',
