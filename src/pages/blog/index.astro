@@ -1,5 +1,5 @@
 ---
-import ArrowIcon from '../../icons/ArrowIcon.astro'
+import { Icon } from 'astro-icon/components'
 import Layout from '../../layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 
@@ -23,7 +23,7 @@ const blogs = await getCollection('blog')
                   aria-hidden='true'
                   class='ml-2 translate-y-px transition-transform group-hover/blog:-translate-y-1 group-hover/blog:translate-x-1 group-focus-visible/blog:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none'
                 >
-                  <ArrowIcon />
+                  <Icon name='arrow' />
                 </span>
               </h3>
               <p class='line-clamp-2'>{blog.body}</p>

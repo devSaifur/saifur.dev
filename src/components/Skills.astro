@@ -1,16 +1,56 @@
 ---
-import NextIcon from '../icons/NextIcon.astro'
-import HtmlIcon from '../icons/HtmlIcon.astro'
-import CssIcon from '../icons/CssIcon.astro'
-import JavascriptIcon from '../icons/JavascriptIcon.astro'
-import TypescriptIcon from '../icons/TypescriptIcon.astro'
-import ReactIcon from '../icons/ReactIcon.astro'
-import NodeIcon from '../icons/NodeIcon.astro'
-import MongodbIcon from '../icons/MongodbIcon.astro'
-import MysqlIcon from '../icons/MysqlIcon.astro'
-import PostgresqlIcon from '../icons/PostgresqlIcon.astro'
-import TailwindIcon from '../icons/TailwindIcon.astro'
-import ExpressIcon from '../icons/ExpressIcon.astro'
+import { Icon } from 'astro-icon/components'
+
+const config = [
+  {
+    name: 'HTML',
+    icon: 'html',
+  },
+  {
+    name: 'CSS',
+    icon: 'css',
+  },
+  {
+    name: 'Javascript',
+    icon: 'javascript',
+  },
+  {
+    name: 'Tailwind',
+    icon: 'tailwind',
+  },
+  {
+    name: 'React',
+    icon: 'react',
+  },
+  {
+    name: 'Typescript',
+    icon: 'typescript',
+  },
+  {
+    name: 'Node.js',
+    icon: 'nodejs',
+  },
+  {
+    name: 'Express.js',
+    icon: 'express',
+  },
+  {
+    name: 'MongoDB',
+    icon: 'mongodb',
+  },
+  {
+    name: 'Next.js',
+    icon: 'nextjs',
+  },
+  {
+    name: 'PostgreSQL',
+    icon: 'postgresql',
+  },
+  {
+    name: 'MySQL',
+    icon: 'mysql',
+  },
+]
 ---
 
 <section>
@@ -18,100 +58,15 @@ import ExpressIcon from '../icons/ExpressIcon.astro'
   <div
     class='grid grid-flow-col grid-rows-4 rounded-md bg-teal-400/10 py-2 *:m-2 *:flex *:flex-col *:items-center *:gap-y-1 sm:grid-rows-2'
   >
-    <span>
-      <HtmlIcon />
-      <span
-        class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
-        >HTML</span
-      >
-    </span>
-
-    <span>
-      <CssIcon />
-      <span
-        class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
-        >CSS</span
-      >
-    </span>
-
-    <span>
-      <JavascriptIcon />
-      <span
-        class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
-        >Javascript</span
-      >
-    </span>
-
-    <span>
-      <TailwindIcon />
-      <span
-        class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
-        >Tailwind</span
-      >
-    </span>
-
-    <span>
-      <ReactIcon />
-      <span
-        class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
-        >React</span
-      >
-    </span>
-
-    <span>
-      <TypescriptIcon />
-      <span
-        class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
-        >Typescript</span
-      >
-    </span>
-
-    <span>
-      <NodeIcon />
-      <span
-        class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
-        >Node.js</span
-      >
-    </span>
-
-    <span>
-      <ExpressIcon />
-      <span
-        class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
-        >Express</span
-      >
-    </span>
-
-    <span>
-      <MongodbIcon />
-      <span
-        class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
-        >MongoDB</span
-      >
-    </span>
-
-    <span>
-      <NextIcon />
-      <span
-        class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
-        >Next.js</span
-      >
-    </span>
-
-    <span>
-      <PostgresqlIcon />
-      <span
-        class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
-        >PostgreSQL</span
-      >
-    </span>
-
-    <span>
-      <MysqlIcon />
-      <span
-        class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'
-        >MySQL</span
-      >
-    </span>
+    {
+      config.map((item) => (
+        <span>
+          <Icon name={item.icon} class='size-5 sm:size-6' />
+          <span class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'>
+            {item.name}
+          </span>
+        </span>
+      ))
+    }
   </div>
 </section>

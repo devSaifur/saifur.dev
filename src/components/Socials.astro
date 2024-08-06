@@ -1,8 +1,5 @@
 ---
-import GithubIcon from '../icons/GithubIcon.astro'
-import LinkedinIcon from '../icons/LinkedinIcon.astro'
-import XIcon from '../icons/XIcon.astro'
-import DownloadIcon from '../icons/DownloadIcon.astro'
+import { Icon } from 'astro-icon/components'
 ---
 
 <div class='grid gap-8 lg:pt-48'>
@@ -12,21 +9,21 @@ import DownloadIcon from '../icons/DownloadIcon.astro'
   >
     <a target='_blank' href='https://github.com/devSaifur'>
       <label class='sr-only'>Github social link</label>
-      <GithubIcon />
+      <Icon name='github' class='size-6 cursor-pointer sm:size-8' />
     </a>
     <a target='_blank' href='https://www.linkedin.com/in/dev-saifur'>
       <label class='sr-only'>Linkedin social link</label>
-      <LinkedinIcon />
+      <Icon name='linkedin' class='size-8 cursor-pointer sm:size-10' />
     </a>
     <a target='_blank' href='https://x.com/devSaifur'>
       <label class='sr-only'>X, formally Twitter social link</label>
-      <XIcon />
+      <Icon name='x' class='size-5 cursor-pointer sm:size-6' />
     </a>
     <button
       id='download-cv'
       class='focus-visible:ring-ring inline-flex items-center justify-center whitespace-nowrap rounded-md bg-slate-700 px-4 py-2 text-xs font-medium shadow transition-colors hover:bg-slate-700/90 focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 sm:text-sm'
     >
-      <DownloadIcon />CV</button
+      <Icon name='download' class='mr-1 size-4' />CV</button
     >
   </ul>
 </div>
