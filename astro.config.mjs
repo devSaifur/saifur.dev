@@ -10,8 +10,4 @@ export default defineConfig({
   output: 'server',
   adapter: cloudflare(),
   site: 'https://saifur.pages.dev',
-  prefetch: {
-    defaultStrategy: 'viewport',
-    prefetchAll: true,
-  },
 })
