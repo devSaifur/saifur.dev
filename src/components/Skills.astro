@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components'
+import Nextjs from '../icons/Nextjs.astro'
 
 const config = [
   {
@@ -56,12 +57,16 @@ const config = [
 <section>
   <h2 class='pb-4 text-lg font-bold uppercase text-slate-100'>Skills</h2>
   <div
-    class='grid grid-flow-col grid-rows-4 rounded-md bg-teal-400/10 py-2 *:m-2 *:flex *:flex-col *:items-center *:gap-y-1 sm:grid-rows-2'
+    class='grid grid-cols-3 gap-4 rounded-md bg-teal-400/10 p-4 sm:grid-cols-6'
   >
     {
       config.map((item) => (
-        <span>
-          <Icon name={item.icon} class='size-5 sm:size-6' />
+        <span class='flex flex-col items-center gap-y-1'>
+          {item.icon !== 'nextjs' ? (
+            <Icon name={item.icon} class='size-5 sm:size-6' />
+          ) : (
+            <Nextjs /> // astro-icons wasn't working properly with next.js icon
+          )}
           <span class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-teal-300'>
             {item.name}
           </span>
