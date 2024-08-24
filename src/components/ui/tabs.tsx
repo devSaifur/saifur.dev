@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import * as TabsPrimitive from '@radix-ui/react-tabs'
 
 const tabs = ['Home', 'Docs', 'Components', 'Effects'] as const
 
@@ -35,7 +36,7 @@ export const ButtonShapeTabs = () => {
   const [selected, setSelected] = useState<string>(tabs[0])
   return (
     <div className="mb-8 flex flex-wrap items-center gap-2">
-      {tabs.map((tab, index) => (
+      {tabs.map((tab) => (
         <Tab
           text={tab}
           selected={selected === tab}
