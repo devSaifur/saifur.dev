@@ -1,13 +1,17 @@
 ---
-import { getEntryBySlug } from 'astro:content'
-import Layout from '../../layouts/Layout.astro'
+import { getEntry } from 'astro:content'
+import Layout from '~/layouts/Layout.astro'
 
 const { slug } = Astro.params
-const blog = await getEntryBySlug('blog', slug as string)
+const blog = await getEntry('blog', slug as string)
 
 if (!blog) return Astro.redirect('/404')
 
 const { Content } = await blog.render()
+
+export async function getStaticPaths() {
+  return [{ params: { slug: 'test-test' } }]
+}
 ---
 
 <Layout title={blog.data.title} description={blog.data.title}>

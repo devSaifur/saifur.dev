@@ -5,14 +5,14 @@ import { Icon } from 'astro-icon/components'
 const blogs = await getCollection('blog')
 ---
 
-<section id='Blogs' class='space-y-10'>
-  <h2 class='pb-4 text-lg font-bold uppercase text-slate-100'>Blogs</h2>
+<section id='Blogs' class='space-y-10 text-white'>
+  <h2 class='text-accent-purple pb-4 text-lg font-bold uppercase'>Blogs</h2>
   {
     blogs.map((blog) => (
       <a href={`/blog/${blog.slug}`}>
-        <div class='group/blog flex flex-col gap-2 rounded-md py-4 lg:px-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/95 lg:hover:shadow-primary lg:hover:drop-shadow-lg'>
+        <div class='group/blog hvoer:bg-stone-900/50 flex flex-col gap-2 rounded-md border border-emerald-600 py-4 lg:px-4 lg:hover:cursor-pointer'>
           <p class='text-sm'>{blog.data.date}</p>
-          <h3 class='flex items-center text-xl text-slate-100 group-hover/blog:text-teal-300'>
+          <h3 class='group-hover/blog:text-accent flex items-center text-xl'>
             {blog.data.title}
             <span
               aria-hidden='true'

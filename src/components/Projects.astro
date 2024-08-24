@@ -38,37 +38,38 @@ const config = [
 ] as const
 ---
 
-<section id="Projects" class="space-y-10">
-  <h2 class="pb-4 text-lg font-bold uppercase text-slate-100">Projects</h2>
+<section id='Projects' class='grid gap-y-6'>
+  <h2 class='text-accent-purple pb-4 text-lg font-bold uppercase'>Projects</h2>
   {
     config.map((project) => (
-      <a target="_blank" href={project.url}>
-        <div class="group/project flex flex-col gap-4 rounded-md py-4 md:flex-row lg:px-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/95 lg:hover:shadow-primary lg:hover:drop-shadow-lg">
-          <div class="flex flex-col space-y-2 md:order-2 md:gap-2">
-            <h3 class="flex items-center font-medium text-slate-100 group-hover/project:text-teal-300">
+      <a target='_blank' href={project.url}>
+        <div class='group/project mb-6 grid w-full gap-y-6 rounded-md border border-emerald-600 px-4 py-4 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)] transition-all delay-75 md:mb-2 md:grid-cols-[1fr,2fr] md:gap-0 lg:hover:cursor-pointer lg:hover:bg-stone-900/50'>
+          <div class='grid space-y-4 md:order-2 md:gap-2 md:space-y-3'>
+            <h3 class='group-hover/project:text-accent flex items-center font-medium text-white'>
               {project.name}
               <span
-                aria-hidden="true"
-                class="ml-2 translate-y-px transition-transform group-hover/project:-translate-y-1 group-hover/project:translate-x-1 group-focus-visible/project:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none"
+                aria-hidden='true'
+                class='ml-2 translate-y-px transition-transform group-hover/project:-translate-y-1 group-hover/project:translate-x-1 group-focus-visible/project:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none'
               >
-                <Icon name="arrow" />
+                <Icon name='arrow' />
               </span>
             </h3>
-            <p class="text-justify text-sm text-slate-400">
+            <p class='text-justify text-sm text-white/80'>
               {project.description}
             </p>
-            <ul class="space-x-2 space-y-2 text-teal-300 *:rounded-full *:bg-teal-400/10 *:px-3 *:py-1 *:text-xs *:font-medium *:leading-5">
+            <ul class='*:bg-accent/10 text-accent/80 space-x-2 space-y-2 *:rounded-full *:px-3 *:py-1 *:text-xs *:font-medium *:leading-5'>
               {project.tech.map((tech) => (
                 <span>{tech}</span>
               ))}
             </ul>
           </div>
+
           <Image
             src={project.image}
-            width="200"
-            height="150"
-            alt="The Next Shop"
-            class="h-24 w-36 rounded-md object-fill md:order-1"
+            width='200'
+            height='150'
+            alt='The Next Shop'
+            class='mb-auto max-w-36 rounded-md object-fill md:order-1'
           />
         </div>
       </a>
