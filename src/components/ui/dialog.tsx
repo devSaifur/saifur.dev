@@ -17,7 +17,7 @@ import {
 import { createPortal } from 'react-dom'
 import { cn } from '~/lib/utils'
 import { useOnClickOutside } from 'usehooks-ts'
-import { XIcon } from 'lucide-react'
+import { Cross2Icon } from '@radix-ui/react-icons'
 
 interface DialogContextType {
   isOpen: boolean
@@ -208,7 +208,7 @@ type DialogContainerProps = {
   style?: React.CSSProperties
 }
 
-function DialogContainer({ children }: DialogContainerProps) {
+function DialogContainer({ children, className }: DialogContainerProps) {
   const { isOpen, uniqueId } = useDialog()
   const [mounted, setMounted] = useState(false)
 
@@ -220,12 +220,15 @@ function DialogContainer({ children }: DialogContainerProps) {
   if (!mounted) return null
 
   return createPortal(
-    <AnimatePresence initial={false} mode="sync">
+    <AnimatePresence initial={false} mode="wait">
       {isOpen && (
         <>
           <motion.div
             key={`backdrop-${uniqueId}`}
-            className="fixed inset-0 h-full w-full bg-white/40 backdrop-blur-sm dark:bg-black/40"
+            className={cn(
+              'fixed inset-0 h-full w-full bg-white/40 backdrop-blur-sm dark:bg-black/40',
+              className
+            )}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -334,6 +337,8 @@ function DialogImage({ src, alt, className, style }: DialogImageProps) {
     <motion.img
       src={src}
       alt={alt}
+      width={200}
+      height={150}
       className={cn(className)}
       layoutId={`dialog-img-${uniqueId}`}
       style={style}
@@ -370,7 +375,7 @@ function DialogClose({ children, className, variants }: DialogCloseProps) {
       exit="exit"
       variants={variants}
     >
-      {children || <XIcon size={24} />}
+      {children || <Cross2Icon className="size-6" />}
     </motion.button>
   )
 }
