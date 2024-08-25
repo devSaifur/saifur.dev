@@ -127,9 +127,12 @@ type DialogContent = {
 
 function DialogContent({ children, className, style }: DialogContent) {
   const { setIsOpen, isOpen, uniqueId, triggerRef } = useDialog()
+
   const containerRef = useRef<HTMLDivElement>(null)
+
   const [firstFocusableElement, setFirstFocusableElement] =
     useState<HTMLElement | null>(null)
+
   const [lastFocusableElement, setLastFocusableElement] =
     useState<HTMLElement | null>(null)
 
@@ -164,19 +167,19 @@ function DialogContent({ children, className, style }: DialogContent) {
 
   useEffect(() => {
     if (isOpen) {
-      document.body.classList.add('overflow-hidden')
+      document.body.style.overflow = 'hidden'
       const focusableElements = containerRef.current?.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      )
+      ) as NodeListOf<HTMLElement>
       if (focusableElements && focusableElements.length > 0) {
         setFirstFocusableElement(focusableElements[0] as HTMLElement)
         setLastFocusableElement(
           focusableElements[focusableElements.length - 1] as HTMLElement
         )
-        ;(focusableElements[0] as HTMLElement).focus()
+        focusableElements[0]?.focus()
       }
     } else {
-      document.body.classList.remove('overflow-hidden')
+      document.body.style.overflow = 'unset'
       triggerRef.current?.focus()
     }
   }, [isOpen, triggerRef])
@@ -230,9 +233,9 @@ function DialogContainer({ children, className }: DialogContainerProps) {
               'fixed inset-0 h-full w-full bg-white/40 backdrop-blur-sm dark:bg-black/40',
               className
             )}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
           />
           <div className="fixed inset-0 z-50 flex items-center justify-center">
             {children}
@@ -376,7 +379,7 @@ function DialogClose({ children, className, variants }: DialogCloseProps) {
       exit="exit"
       variants={variants}
     >
-      {children || <Cross2Icon className="size-6" />}
+      {children ?? <Cross2Icon className="size-6" />}
     </motion.button>
   )
 }
