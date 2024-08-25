@@ -1,6 +1,6 @@
+import * as TabsPrimitive from '@radix-ui/react-tabs'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import * as TabsPrimitive from '@radix-ui/react-tabs'
 
 const tabs = ['Home', 'Docs', 'Components', 'Effects'] as const
 

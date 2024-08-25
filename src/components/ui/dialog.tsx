@@ -1,3 +1,11 @@
+import { Cross2Icon } from '@radix-ui/react-icons'
+import {
+  AnimatePresence,
+  MotionConfig,
+  type Transition,
+  type Variant,
+  motion,
+} from 'framer-motion'
 import React, {
   useCallback,
   useContext,
@@ -7,17 +15,10 @@ import React, {
   useRef,
   useState,
 } from 'react'
-import {
-  motion,
-  AnimatePresence,
-  MotionConfig,
-  type Transition,
-  type Variant,
-} from 'framer-motion'
 import { createPortal } from 'react-dom'
-import { cn } from '~/lib/utils'
 import { useOnClickOutside } from 'usehooks-ts'
-import { Cross2Icon } from '@radix-ui/react-icons'
+
+import { cn } from '~/lib/utils'
 
 interface DialogContextType {
   isOpen: boolean

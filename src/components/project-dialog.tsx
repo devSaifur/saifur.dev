@@ -1,17 +1,18 @@
 import {
+  ArrowTopRightIcon,
   GitHubLogoIcon,
   Link2Icon,
-  ArrowTopRightIcon,
 } from '@radix-ui/react-icons'
+
 import {
   Dialog,
-  DialogTrigger,
-  DialogContent,
-  DialogTitle,
-  DialogImage,
-  DialogSubtitle,
   DialogClose,
   DialogContainer,
+  DialogContent,
+  DialogImage,
+  DialogSubtitle,
+  DialogTitle,
+  DialogTrigger,
 } from '~/components/ui/dialog'
 import { ScrollArea } from '~/components/ui/scroll-aria.tsx'
 
