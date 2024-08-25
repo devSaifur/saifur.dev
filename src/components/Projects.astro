@@ -1,5 +1,5 @@
 ---
-import { ProjectDialog } from '~/components/project-dialog'
+import { ProjectDrawer } from './project-drawer'
 
 const config = [
   {
@@ -54,7 +54,7 @@ const config = [
   <div class='grid gap-y-6'>
     {
       config.map((project) => (
-        <ProjectDialog
+        <ProjectDrawer
           client:idle
           name={project.name}
           description={project.description}
