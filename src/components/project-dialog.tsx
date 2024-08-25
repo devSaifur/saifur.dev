@@ -17,7 +17,10 @@ import { ScrollArea } from '~/components/ui/scroll-aria.tsx'
 
 type DialogProps = {
   name: string
-  url: string
+  url: {
+    github: string
+    website: string
+  }
   description: string
   image: string
   tech: string[]
@@ -52,12 +55,16 @@ export const ProjectDialog = ({
                 aria-hidden="true"
                 className="ml-2 translate-y-px transition-transform group-hover/project:-translate-y-1 group-hover/project:translate-x-1 group-focus-visible/project:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none"
               >
-                <ArrowTopRightIcon className="size-3 md:size-5" />
+                <ArrowTopRightIcon className="size-4 md:size-5" />
               </span>
             </DialogTitle>
-            <div className="flex items-center gap-x-3">
-              <Link2Icon className="size-4 text-teal-600 md:size-5" />
-              <GitHubLogoIcon className="size-4 text-teal-600 md:size-5" />
+            <div className="flex items-center gap-x-3 text-teal-600">
+              <a href={url.website} target="_blank" rel="noreferrer">
+                <Link2Icon className="size-5" />
+              </a>
+              <a href={url.github} target="_blank" rel="noreferrer">
+                <GitHubLogoIcon className="size-5" />
+              </a>
             </div>
           </div>
           <DialogSubtitle className="text-justify text-sm text-white/80">
@@ -83,9 +90,9 @@ export const ProjectDialog = ({
           style={{
             borderRadius: '12px',
           }}
-          className="relative mx-4 h-auto max-w-lg border border-teal-600 bg-stone-900/90"
+          className="relative mx-4 h-auto max-w-2xl border border-teal-600 bg-stone-900/90"
         >
-          <ScrollArea className="h-[90dvh]" type="scroll">
+          <ScrollArea className="h-[80dvh]" type="scroll">
             <div className="relative p-6">
               <div className="flex justify-center py-10">
                 <DialogImage

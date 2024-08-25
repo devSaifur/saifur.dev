@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ca8a04 #134e4a;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #134e4a;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ca8a04;
+  border-radius: 14px;
+  border: 3px solid #134e4a;
+}
+
 @layer base {
   :root {
     --accent: 255 190 111;
@@ -10,7 +32,8 @@
 }
 
 html,
-body {
+body,
+* {
   scrollbar-gutter: stable;
 }
 
