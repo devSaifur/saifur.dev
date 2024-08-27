@@ -8,6 +8,9 @@ import Blogs from '~/components/Blogs.astro'
 import Footer from '~/components/Footer.astro'
 import About from '~/components/About.astro'
 import Skills from '~/components/Skills.astro'
+import BackgroundDots from '~/components/ui/BackgroundDots.astro'
+import BackgroundGrid from '~/components/ui/BackgroundGrid.astro'
+import NavDesktop from '~/components/NavDesktop.astro'
 ---
 
 <script>
@@ -22,21 +25,28 @@ import Skills from '~/components/Skills.astro'
   description='Personal website and blog of Saifur Rahman, a full-stack web developer.'
   image='https://github.com/devSaifur/saifur.dev/raw/main/src/images/thumbnail.png'
 >
+  <BackgroundDots />
+  <BackgroundGrid />
+
   <Wrapper>
-    <Header />
-    <main class='grid gap-12 lg:pt-12'>
-      <About />
+    <NavDesktop />
 
-      <!-- TECHNOLOGIES -->
-      <Skills />
+    <div class='grid gap-y-12 lg:grid-cols-2'>
+      <Header />
+      <main class='grid gap-y-12 lg:pt-32'>
+        <About />
 
-      <!-- PROJECTS -->
-      <Projects />
+        <!-- TECHNOLOGIES -->
+        <Skills />
 
-      <!-- BLOGS -->
-      <Blogs />
+        <!-- PROJECTS -->
+        <Projects />
 
-      <Footer />
-    </main>
+        <!-- BLOGS -->
+        <Blogs />
+
+        <Footer />
+      </main>
+    </div>
   </Wrapper>
 </Layout>

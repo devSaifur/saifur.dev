@@ -3,7 +3,8 @@ import { getEntry } from 'astro:content'
 import Layout from '~/layouts/Layout.astro'
 
 const { slug } = Astro.params
-const blog = await getEntry('blog', slug as string)
+
+const blog = await getEntry('blogs', slug as string)
 
 if (!blog) return Astro.redirect('/404')
 
