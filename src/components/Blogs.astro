@@ -6,14 +6,18 @@ const blogs = await getCollection('blogs')
 ---
 
 <section id='Blogs' class='space-y-4 text-white'>
-  <h2 class='pb-4 text-lg font-bold uppercase text-accent-purple'>Blogs</h2>
-  <div class='grid gap-y-6'>
+  <h2
+    class='pb-4 text-lg font-bold uppercase text-cyan-300 md:text-center md:text-4xl md:lowercase'
+  >
+    Blogs
+  </h2>
+  <div class='mx-auto grid max-w-4xl gap-y-6'>
     {
       blogs.map((blog) => (
         <a href={`/blogs/${blog.slug}`}>
           <div class='group/blog flex flex-col gap-2 rounded-md bg-stone-900/90 px-4 py-4 outline-1 outline-accent delay-75 hover:outline md:px-6 md:transition-all md:duration-300 md:ease-in-out md:hover:scale-105 lg:hover:cursor-pointer'>
             <p class='text-xs'>{blog.data.date}</p>
-            <h3 class='flex items-center text-base group-hover/blog:text-accent'>
+            <h3 class='flex items-center text-base text-accent'>
               {blog.data.title}
               <span
                 aria-hidden='true'
