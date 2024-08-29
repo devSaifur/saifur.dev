@@ -4,6 +4,8 @@ import '~/styles/main.css'
 
 import '@fontsource/geist-sans'
 
+import NavBar from '~/components/Navbar.astro'
+
 interface Props {
   title: string
   description: string
@@ -51,6 +53,7 @@ const { title, description, image } = Astro.props
   <body
     class='min-h-screen scroll-smooth bg-[rgba(30,30,46,255)] font-primary text-base antialiased'
   >
+    <NavBar />
     <slot />
   </body>
 </html>

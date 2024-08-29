@@ -4,7 +4,7 @@ import Layout from '~/layouts/Layout.astro'
 
 const { slug } = Astro.params
 
-const blog = await getEntry('blogs', slug as string)
+const blog = await getEntry('blogs', slug)
 
 if (!blog) return Astro.redirect('/404')
 
