@@ -3,21 +3,21 @@ import { Icon } from 'astro-icon/components'
 import Layout from '~/layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 
-const blogs = (await getCollection('blogs')) as any[]
+const blogs = await getCollection('blogs')
 ---
 
 <Layout
   title='Blogs'
   description='Blogs of Saifur Rahman, a full-stack web developer.'
 >
-  <main class='mx-auto max-w-2xl py-16'>
+  <main class='mx-auto max-w-2xl py-16 text-white'>
     {
       blogs.map((blog) => {
         return (
-          <a href={`/blog/${blog.slug}`}>
-            <div class='group/blog flex flex-col gap-2 rounded-md py-4 lg:px-4 lg:hover:cursor-pointer lg:hover:bg-slate-800/95 lg:hover:shadow-primary lg:hover:drop-shadow-lg'>
-              <p>{blog.data.date}</p>
-              <h3 class='flex items-center text-lg text-slate-100 group-hover/blog:text-teal-300'>
+          <a href={`/blogs/${blog.slug}`}>
+            <div class='group/blog flex flex-col gap-2 rounded-md bg-stone-900/90 px-4 py-4 outline-1 outline-accent delay-75 hover:outline md:px-6 md:transition-all md:duration-300 md:ease-in-out md:hover:scale-105 lg:hover:cursor-pointer'>
+              <p class='text-xs'>{blog.data.date}</p>
+              <h3 class='flex items-center text-base text-accent'>
                 {blog.data.title}
                 <span
                   aria-hidden='true'
@@ -26,7 +26,7 @@ const blogs = (await getCollection('blogs')) as any[]
                   <Icon name='arrow' />
                 </span>
               </h3>
-              <p class='line-clamp-2'>{blog.body}</p>
+              <p class='line-clamp-2 text-sm'>{blog.body}</p>
             </div>
           </a>
         )

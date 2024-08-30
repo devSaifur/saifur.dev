@@ -1,18 +1,23 @@
 <nav
-  class='sticky z-50 hidden w-full list-none justify-center gap-x-28 pt-4 text-lg font-semibold text-sky-200/95 md:flex'
+  class='fixed left-0 right-0 z-50 flex list-none justify-center px-6 pt-3 text-base font-semibold text-sky-200/95 transition-transform delay-150 duration-300 ease-in-out md:px-8 md:pt-4 md:text-lg'
 >
   <ul
-    class='relative my-auto flex gap-x-16 rounded-lg bg-stone-900 px-8 py-3 shadow-[0_10px_20px_rgba(15,_118,_110,_0.7)]'
+    class='relative my-auto flex gap-x-4 rounded-lg bg-stone-900 px-8 py-3 shadow-[0_10px_20px_rgba(15,_118,_110,_0.7)]'
   >
-    <li class='nav-link z-20 cursor-pointer rounded-xl px-5 py-1'>
-      <a href='/'>Home</a>
-    </li>
-    <li class='nav-link z-20 cursor-pointer rounded-xl px-5 py-1'>
-      <a href='/blogs'>Blogs</a>
-    </li>
-    <li class='nav-link z-20 cursor-pointer rounded-xl px-5 py-1'>
-      <a href='/projects'>Projects</a>
-    </li>
+    <a
+      href='/'
+      class='nav-link z-20 cursor-pointer rounded-xl px-4 py-1 md:px-5'>Home</a
+    >
+    <a
+      href='/blogs'
+      class='nav-link z-20 cursor-pointer rounded-xl px-4 py-1 md:px-5'>Blogs</a
+    >
+    <a
+      href='/projects'
+      class='nav-link z-20 cursor-pointer rounded-xl px-4 py-1 md:px-5'
+      >Projects</a
+    >
+
     <div
       id='background-slide'
       class='absolute left-0 top-2.5 h-4/6 rounded-lg bg-teal-700 transition-all delay-150 duration-300 ease-in-out'
@@ -21,18 +26,25 @@
   </ul>
 </nav>
 
+<style>
+  .nav-hidden {
+    transform: translateY(-100%);
+  }
+</style>
+
 <script>
   document.addEventListener('astro:page-load', () => {
+    const navContainer = document.querySelector('nav') as HTMLElement
     const navLinks = document.querySelectorAll('.nav-link')
     const backgroundSlide = document.getElementById('background-slide')
-
     let activeLink: Element | null = null
+    let lastScrollTop = 0
+    let isNavVisible = true
 
     const updateBackgroundPosition = (link: Element) => {
       const linkRect = link.getBoundingClientRect()
-      const navRect = link.parentElement!.getBoundingClientRect()
-
-      if (!backgroundSlide) return
+      const navRect = link.parentElement?.getBoundingClientRect()
+      if (!backgroundSlide || !navRect) return
 
       backgroundSlide.style.width = `${linkRect.width}px`
       backgroundSlide.style.transform = `translateX(${linkRect.left - navRect.left}px)`
@@ -50,17 +62,24 @@
     const currentPath = window.location.pathname
 
     const initialActiveLink = Array.from(navLinks).find(
-      (link) => link.querySelector('a')?.getAttribute('href') === currentPath
+      (link) => link.getAttribute('href') === currentPath
     )
 
+    // Set initial position of background slide
     if (initialActiveLink) {
       setActiveLink(initialActiveLink)
-    } else if (typeof navLinks[0] !== 'undefined') {
-      setActiveLink(navLinks[0])
+      if (backgroundSlide) {
+        backgroundSlide.style.transition = 'none'
+        updateBackgroundPosition(initialActiveLink)
+        backgroundSlide.offsetHeight
+        backgroundSlide.style.transition = ''
+      }
+    } else if (navLinks.length > 0) {
+      setActiveLink(navLinks[0] as Element)
     }
 
     navLinks.forEach((link) => {
-      link.addEventListener('mouseenter', () => {
+      link.addEventListener('mouseover', () => {
         updateBackgroundPosition(link)
       })
 
@@ -74,5 +93,30 @@
         setActiveLink(link)
       })
     })
+
+    // Smart scroll functionality
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop
+
+      if (scrollTop > lastScrollTop && isNavVisible && scrollTop > 50) {
+        // Scrolling down & navbar is visible
+        navContainer.classList.add('nav-hidden')
+        isNavVisible = false
+      } else if (scrollTop < lastScrollTop && !isNavVisible) {
+        // Scrolling up & navbar is hidden
+        navContainer.classList.remove('nav-hidden')
+        isNavVisible = true
+      }
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop // For Mobile or negative scrolling
+    }
+
+    // Show navbar initially
+    setTimeout(() => {
+      navContainer.style.display = 'flex'
+      navContainer.classList.remove('nav-hidden')
+    }, 100)
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
   })
 </script>
