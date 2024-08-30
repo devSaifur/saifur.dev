@@ -1,8 +1,8 @@
 <nav
-  class='fixed left-0 right-0 z-50 flex list-none justify-center px-6 pt-3 text-base font-semibold text-sky-200/95 transition-transform delay-150 duration-300 ease-in-out md:px-8 md:pt-4 md:text-lg'
+  class='fixed left-0 right-0 z-50 flex list-none justify-center pt-3 text-sm font-semibold text-sky-200/95 transition-transform delay-150 duration-300 ease-in-out md:text-base'
 >
   <ul
-    class='relative my-auto flex gap-x-4 rounded-lg bg-stone-900 px-8 py-3 shadow-[0_10px_20px_rgba(15,_118,_110,_0.7)]'
+    class='relative my-auto flex gap-x-4 rounded-lg bg-stone-900 px-5 py-4 shadow-[0_10px_20px_rgba(15,_118,_110,_0.7)] md:gap-x-8'
   >
     <a
       href='/'
@@ -34,9 +34,10 @@
 
 <script>
   document.addEventListener('astro:page-load', () => {
-    const navContainer = document.querySelector('nav') as HTMLElement
     const navLinks = document.querySelectorAll('.nav-link')
+    const navContainer = document.querySelector('nav') as HTMLElement
     const backgroundSlide = document.getElementById('background-slide')
+
     let activeLink: Element | null = null
     let lastScrollTop = 0
     let isNavVisible = true
