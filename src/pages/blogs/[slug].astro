@@ -1,8 +1,10 @@
 ---
 import { getEntry } from 'astro:content'
-import Layout from '~/layouts/Layout.astro'
+import BlogLayout from '~/layouts/BlogLayout.astro'
 
 const { slug } = Astro.params
+
+if (!slug) return Astro.redirect('/404')
 
 const blog = await getEntry('blogs', slug)
 
@@ -11,7 +13,7 @@ if (!blog) return Astro.redirect('/404')
 const { Content } = await blog.render()
 ---
 
-<Layout title={blog.data.title} description={blog.data.title}>
+<BlogLayout title={blog.data.title} description={blog.data.title}>
   <main
     class='mx-auto flex max-w-7xl flex-col px-8 py-8 md:px-14 md:py-12 lg:py-20 lg:pl-60'
   >
@@ -22,4 +24,4 @@ const { Content } = await blog.render()
       <Content />
     </article>
   </main>
-</Layout>
+</BlogLayout>
