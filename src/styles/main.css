@@ -37,10 +37,6 @@ body,
   scrollbar-gutter: stable;
 }
 
-* {
-  min-width: 0;
-}
-
 h1,
 h2,
 h3,
