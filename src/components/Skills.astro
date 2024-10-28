@@ -4,14 +4,6 @@ import Nextjs from '~/icons/Nextjs.astro'
 
 const config = [
   {
-    name: 'HTML',
-    icon: 'html',
-  },
-  {
-    name: 'CSS',
-    icon: 'css',
-  },
-  {
     name: 'Javascript',
     icon: 'javascript',
   },
@@ -51,29 +43,37 @@ const config = [
     name: 'MySQL',
     icon: 'mysql',
   },
+  {
+    name: 'Python',
+    icon: 'python',
+  },
+  {
+    name: 'Docker',
+    icon: 'docker',
+  },
 ]
 ---
 
-<section class='flex flex-col items-center space-y-4'>
+<section class="flex flex-col items-center space-y-4">
   <h2
-    class='mr-auto text-start text-lg font-bold text-accent-purple md:mx-auto md:py-8 md:text-4xl'
+    class="mr-auto text-start text-lg font-bold text-accent-purple md:mx-auto md:py-8 md:text-4xl"
   >
-    <span class='hidden text-green-300 md:inline'>code</span><span
-      class='hidden text-accent-purple md:inline'>:</span
-    ><span class='text-cyan-300 max-md:uppercase'>skills</span>
+    <span class="hidden text-green-300 md:inline">code</span><span
+      class="hidden text-accent-purple md:inline">:</span
+    ><span class="text-cyan-300 max-md:uppercase">skills</span>
   </h2>
   <div
-    class='grid w-full max-w-4xl grid-cols-3 gap-5 rounded-md bg-stone-900/90 px-6 py-5 shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)] md:grid-cols-6 md:gap-8 md:px-8 md:py-10'
+    class="grid w-full max-w-4xl grid-cols-3 gap-5 rounded-md bg-stone-900/90 px-6 py-5 shadow-[0px_10px_1px_rgba(221,_221,_221,_1),_0_10px_20px_rgba(204,_204,_204,_1)] md:grid-cols-6 md:gap-8 md:px-8 md:py-10"
   >
     {
       config.map((item) => (
-        <span class='flex flex-col items-center gap-y-1'>
+        <span class="flex flex-col items-center gap-y-1">
           {item.icon !== 'nextjs' ? (
-            <Icon name={item.icon} class='size-5 sm:size-6 lg:size-8' />
+            <Icon name={item.icon} class="size-5 sm:size-6 lg:size-8" />
           ) : (
             <Nextjs /> // astro-icons wasn't working properly with next.js icon
           )}
-          <span class='rounded-full px-3 py-1 text-xs font-medium leading-5 text-accent/80'>
+          <span class="rounded-full px-3 py-1 text-xs font-medium leading-5 text-accent/80">
             {item.name}
           </span>
         </span>
