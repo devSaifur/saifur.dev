@@ -35,9 +35,6 @@ importers:
       astro-icon:
         specifier: ^1.1.4
         version: 1.1.4
-      astro-vanjs:
-        specifier: ^0.1.2
-        version: 0.1.2(mini-van-plate@0.6.1)(vanjs-core@1.5.2)
       motion:
         specifier: ^11.11.17
         version: 11.11.17(react@18.3.1)
@@ -1050,12 +1047,6 @@ packages:
     peerDependencies:
       astro: ^4.12.0
 
-  astro-vanjs@0.1.2:
-    resolution: {integrity: sha512-p8myQAVTgfpFZvBIC4yCnGNP7irq+zJoSd1XEz2BYnNi5ECe0eF5CjCO4scj9QHOPklyR+2jegIyGK051s1Vew==}
-    peerDependencies:
-      mini-van-plate: ^0.6.0
-      vanjs-core: ^1.5.1
-
   astro@4.16.14:
     resolution: {integrity: sha512-2IuLkIp4idyspugq+F52rHZyNqHHi2AdQzuKp3SGytg/YAm50dNeWhP/7l+enjgWZLloLq5xsH5gVQpoDFoyFg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
@@ -1951,9 +1942,6 @@ packages:
     resolution: {integrity: sha512-VP79XUPxV2CigYP3jWwAUFSku2aKqBH7uTAapFWCBqutsbmDo96KY5o8uh6U+/YSIn5OxJnXp73beVkpqMIGhA==}
     engines: {node: '>=18'}
 
-  mini-van-plate@0.6.1:
-    resolution: {integrity: sha512-i4kCD5xzkdtQiVnBSN4xFHru6QGPPWJALAm4IB0IRPawIHUK5J/Zv2bx94Nev1YABKN1zJgwxqvuSygoltrQIg==}
-
   miniflare@3.20241106.1:
     resolution: {integrity: sha512-dM3RBlJE8rUFxnqlPCaFCq0E7qQqEQvKbYX7W/APGCK+rLcyLmEBzC4GQR/niXdNM/oV6gdg9AA50ghnn2ALuw==}
     engines: {node: '>=16.13'}
@@ -2701,9 +2689,6 @@ packages:
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
-
-  vanjs-core@1.5.2:
-    resolution: {integrity: sha512-z9MHAzxYbNFJ6MYP+4j9l9KMxDU3ryI65JjIfUbGQwF1paLfiuqtIiq9Ve1UGKLd774Z7mtdWzd+/FR785dKjQ==}
 
   vfile-location@5.0.3:
     resolution: {integrity: sha512-5yXvWDEgqeiYiBe1lbxYF7UMAIm/IcopxMHrMQDq3nvKcjPKIhZklUKL+AE7J7uApI4kwe2snsK+eI6UTj9EHg==}
@@ -3975,11 +3960,6 @@ snapshots:
       pathe: 1.1.2
       recast: 0.23.9
 
-  astro-vanjs@0.1.2(mini-van-plate@0.6.1)(vanjs-core@1.5.2):
-    dependencies:
-      mini-van-plate: 0.6.1
-      vanjs-core: 1.5.2
-
   astro@4.16.14(@types/node@22.9.3)(rollup@4.27.4)(typescript@5.7.2):
     dependencies:
       '@astrojs/compiler': 2.10.3
@@ -5157,8 +5137,6 @@ snapshots:
 
   mimic-function@5.0.1: {}
 
-  mini-van-plate@0.6.1: {}
-
   miniflare@3.20241106.1:
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
@@ -5966,8 +5944,6 @@ snapshots:
       picocolors: 1.1.1
 
   util-deprecate@1.0.2: {}
-
-  vanjs-core@1.5.2: {}
 
   vfile-location@5.0.3:
     dependencies:

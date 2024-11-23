@@ -21,7 +21,6 @@
     "@tailwindcss/typography": "^0.5.15",
     "astro": "latest",
     "astro-icon": "^1.1.4",
-    "astro-vanjs": "^0.1.2",
     "motion": "^11.11.17",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
