@@ -4,42 +4,61 @@ import SocialLinks from './Socials.astro'
 ---
 
 <header
-  class='flex flex-col items-center gap-8 pt-28 text-center lg:mx-auto lg:grid lg:grid-cols-2 lg:items-start lg:pl-16 lg:pt-40 lg:text-start'
+  class="flex flex-col items-center gap-8 pt-28 text-center lg:mx-auto lg:grid lg:grid-cols-2 lg:items-start lg:pl-16 lg:pt-40 lg:text-start"
 >
   <Image
-    src='/images/profile-picture.webp'
-    alt='profile'
+    id="profile-picture"
+    src="/images/profile-picture.webp"
+    alt="profile"
     width={200}
     height={200}
     loading={'eager'}
-    class='size-36 rounded-full border border-accent brightness-90 lg:order-2 lg:mx-auto lg:ml-6 lg:size-80 lg:rounded-2xl'
+    class="size-36 rounded-full outline outline-2 outline-accent brightness-90 lg:order-2 lg:mx-auto lg:ml-6 lg:size-80 lg:rounded-2xl"
   />
-  <div class='space-y-2 text-accent-purple lg:order-1 lg:space-y-6'>
+  <div class="space-y-2 text-accent-purple lg:order-1 lg:space-y-6">
     <h1
-      class='text-3xl font-bold text-sky-200/95 lg:text-7xl lg:font-extrabold'
+      class="text-3xl font-bold text-sky-200/95 lg:text-7xl lg:font-extrabold"
     >
       Saifur Rahman
     </h1>
-    <h2 class='text-lg font-semibold lg:text-2xl lg:leading-8'>
+    <h2 class="text-lg font-semibold lg:text-2xl lg:leading-8">
       Full-Stack Wizard
     </h2>
-    <p class='text-lg leading-normal lg:text-xl'>
+    <p class="text-lg leading-normal lg:text-xl">
       I program things mostly for the web.
     </p>
   </div>
 
   <SocialLinks />
   <section
-    class='max-w-md space-y-4 text-accent-purple lg:order-4 lg:pt-8 lg:text-lg lg:leading-6'
+    class="max-w-md space-y-4 text-accent-purple lg:order-4 lg:pt-8 lg:text-lg lg:leading-6"
   >
     <p>
-      Hello there! I'm <span class='text-accent'>Saifur Rahman</span>, a
+      Hello there! I'm <span class="text-accent">Saifur Rahman</span>, a
       developer specializing in crafting things in the world of full-stack web
       development. I'm someone with a keen eye for detail, I'm very proud of
       what I'm able to do as a professional developer. I take pride in my work
-      and my ability to keep <span class='text-accent'
+      and my ability to keep <span class="text-accent"
         >learning and growing</span
       >.
     </p>
   </section>
 </header>
+
+<script>
+  import { animate } from 'motion'
+
+  document.addEventListener('astro:page-load', () => {
+    animate(
+      '#profile-picture',
+      {
+        y: [-7, 7, -7],
+      },
+      {
+        duration: 5,
+        ease: 'easeInOut',
+        repeat: Infinity,
+      }
+    )
+  })
+</script>

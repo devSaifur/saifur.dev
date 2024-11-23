@@ -19,33 +19,24 @@
     "@fontsource/geist-sans": "^5.1.0",
     "@loglib/tracker": "^0.8.0",
     "@tailwindcss/typography": "^0.5.15",
-    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-    "astro": "^4.16.7",
-    "astro-icon": "^1.1.1",
+    "astro": "latest",
+    "astro-icon": "^1.1.4",
+    "astro-vanjs": "^0.1.2",
+    "motion": "^11.11.17",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.8",
-    "tailwindcss": "^3.4.14",
-    "typescript": "^5.6.3",
-    "wrangler": "^3.83.0"
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.7.2",
+    "wrangler": "^3.90.0"
   },
-  "packageManager": "pnpm@9.9.0",
+  "packageManager": "pnpm@9.10.0",
   "prettier": {
     "semi": false,
     "singleQuote": true,
     "trailingComma": "es5",
-    "importOrder": [
-      "^@core/(.*)$",
-      "^@server/(.*)$",
-      "^@ui/(.*)$",
-      "^~/(.*)$",
-      "^[./]"
-    ],
-    "importOrderSeparation": true,
-    "importOrderSortSpecifiers": true,
     "plugins": [
       "prettier-plugin-astro",
-      "@trivago/prettier-plugin-sort-imports",
       "prettier-plugin-tailwindcss"
     ]
   }
