@@ -1,10 +1,11 @@
 ---
 import { Image } from 'astro:assets'
 import SocialLinks from './Socials.astro'
+import { Time } from './ui/Time'
 ---
 
 <header
-  class="flex flex-col items-center gap-8 pt-28 text-center lg:mx-auto lg:grid lg:grid-cols-2 lg:items-start lg:pl-16 lg:pt-40 lg:text-start"
+  class="flex flex-col items-center gap-8 pt-28 text-center lg:mx-auto lg:grid lg:grid-cols-2 lg:items-start lg:gap-16 lg:pl-16 lg:pt-40 lg:text-start"
 >
   <Image
     id="profile-picture"
@@ -29,16 +30,33 @@ import SocialLinks from './Socials.astro'
     </p>
   </div>
 
-  <SocialLinks />
+  <div class="flex flex-col gap-y-16 lg:order-3">
+    <SocialLinks />
+    <div class="hidden gap-x-6 text-start lg:flex">
+      <Image
+        src="/images/chill-guy.webp"
+        alt="chill guy"
+        width={200}
+        height={200}
+        class="size-24 rounded-lg outline outline-2 outline-accent brightness-90"
+      />
+      <div class="space-y-2">
+        <p class="text-2xl font-semibold text-cyan-400">Saifur</p>
+        <p class="text-xl text-accent">Online (probably)</p>
+        <!-- <Time client:load /> -->
+      </div>
+    </div>
+  </div>
+
   <section
-    class="max-w-md space-y-4 text-accent-purple lg:order-4 lg:pt-8 lg:text-lg lg:leading-6"
+    class="max-w-md space-y-4 text-accent-purple lg:order-4 lg:text-xl lg:leading-8"
   >
     <p>
       Hello there! I'm <span class="text-accent">Saifur Rahman</span>, a
-      developer specializing in crafting things for the web. I'm someone with a
-      keen eye for detail, I'm very proud of what I'm able to do as a
-      professional developer. I take pride in my work and my ability to <span
-        class="text-accent">learn and keep growing</span
+      Full-Stack developer. I mostly work on web related stuff but not only! I'm
+      currently working as a freelance web developer on various marketplaces.
+      And on a marathon to become the best developer I can be :') by <span
+        class="text-accent">keep learning and growing</span
       >.
     </p>
   </section>
@@ -48,16 +66,20 @@ import SocialLinks from './Socials.astro'
   import { animate } from 'motion'
 
   document.addEventListener('astro:page-load', () => {
-    animate(
-      '#profile-picture',
-      {
-        y: [-7, 7, -7],
-      },
-      {
-        duration: 3.5,
-        ease: 'easeInOut',
-        repeat: Infinity,
-      }
-    )
+    const profilePicture = document.getElementById('profile-picture')
+
+    if (profilePicture) {
+      animate(
+        profilePicture,
+        {
+          y: [-7, 7, -7],
+        },
+        {
+          duration: 3.5,
+          ease: 'easeInOut',
+          repeat: Infinity,
+        }
+      )
+    }
   })
 </script>

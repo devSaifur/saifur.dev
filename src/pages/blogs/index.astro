@@ -7,26 +7,26 @@ const blogs = await getCollection('blogs')
 ---
 
 <Layout
-  title='Blogs'
-  description='Blogs of Saifur Rahman, a full-stack web developer.'
+  title="Blogs"
+  description="Blogs of Saifur Rahman, a full-stack web developer."
 >
-  <main class='mx-auto max-w-2xl px-3 py-16 pt-28 text-white md:pt-40'>
+  <main class="mx-auto max-w-2xl px-3 py-16 pt-28 text-white md:pt-40">
     {
       blogs.map((blog) => {
         return (
           <a href={`/blogs/${blog.slug}`}>
-            <div class='group/blog flex flex-col gap-2 rounded-md bg-stone-900/90 px-4 py-4 outline-1 outline-accent delay-75 hover:outline md:px-6 md:transition-all md:duration-300 md:ease-in-out md:hover:scale-105 lg:hover:cursor-pointer'>
-              <p class='text-xs'>{blog.data.date}</p>
-              <h3 class='flex items-center text-base text-accent'>
+            <div class="group/blog flex flex-col gap-2 rounded-md bg-stone-900/90 px-4 py-4 delay-75 md:px-6 md:transition-all md:duration-300 md:ease-in-out md:hover:scale-105 lg:hover:cursor-pointer">
+              <p class="text-xs">{blog.data.date}</p>
+              <h3 class="flex items-center text-base text-accent">
                 {blog.data.title}
                 <span
-                  aria-hidden='true'
-                  class='ml-2 translate-y-px transition-transform group-hover/blog:-translate-y-1 group-hover/blog:translate-x-1 group-focus-visible/blog:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none'
+                  aria-hidden="true"
+                  class="ml-2 translate-y-px transition-transform group-hover/blog:-translate-y-1 group-hover/blog:translate-x-1 group-focus-visible/blog:-translate-y-1 group-focus-visible/project:translate-x-1 motion-reduce:transition-none"
                 >
-                  <Icon name='arrow' />
+                  <Icon name="arrow" />
                 </span>
               </h3>
-              <p class='line-clamp-2 text-sm'>{blog.body}</p>
+              <p class="line-clamp-2 text-sm">{blog.body}</p>
             </div>
           </a>
         )
