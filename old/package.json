@@ -1,0 +1,46 @@
+{
+  "name": "saifur-rahman",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "format": "prettier --write .",
+    "deploy": "pnpm dlx wrangler pages deploy dist",
+    "astro": "astro",
+    "unlighthouse": "pnpm dlx unlighthouse --site https://saifur.pages.dev"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/cloudflare": "^11.2.0",
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/solid-js": "^4.4.4",
+    "@astrojs/tailwind": "^5.1.2",
+    "@fontsource/geist-sans": "^5.1.0",
+    "@loglib/tracker": "^0.8.0",
+    "@tailwindcss/typography": "^0.5.15",
+    "astro": "latest",
+    "astro-icon": "^1.1.4",
+    "astro-vanjs": "^0.1.2",
+    "motion": "^11.11.17",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "solid-js": "^1.9.3",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.7.2",
+    "vanjs-core": "^1.5.2",
+    "wrangler": "^3.90.0"
+  },
+  "packageManager": "pnpm@9.10.0",
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "plugins": [
+      "prettier-plugin-astro",
+      "prettier-plugin-tailwindcss"
+    ]
+  }
+}

@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 const config: Config = {
   content: [
@@ -13,8 +14,20 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        primary: ["Geist Sans", ...defaultTheme.fontFamily.sans],
+      },
+      boxShadow: {
+        primary: "inset_0_1px_0_0_rgba(148,163,184,0.1)",
+      },
+      colors: {
+        accent: {
+          DEFAULT: "rgb(var(--accent) / <alpha-value>)",
+          purple: "rgb(var(--accent-purple) / <alpha-value>)",
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;

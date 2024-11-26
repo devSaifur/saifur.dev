@@ -1,6 +1,6 @@
-import * as React from 'react'
+import * as React from "react";
 
-type IconProps = React.SVGAttributes<SVGElement>
+type IconProps = React.SVGAttributes<SVGElement>;
 
 export const Icons = {
   arrow: (props: IconProps) => (
@@ -15,8 +15,8 @@ export const Icons = {
       <path
         d="M3.64645 11.3536C3.45118 11.1583 3.45118 10.8417 3.64645 10.6465L10.2929 4L6 4C5.72386 4 5.5 3.77614 5.5 3.5C5.5 3.22386 5.72386 3 6 3L11.5 3C11.6326 3 11.7598 3.05268 11.8536 3.14645C11.9473 3.24022 12 3.36739 12 3.5L12 9.00001C12 9.27615 11.7761 9.50001 11.5 9.50001C11.2239 9.50001 11 9.27615 11 9.00001V4.70711L4.35355 11.3536C4.15829 11.5488 3.84171 11.5488 3.64645 11.3536Z"
         fill="currentColor"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
       ></path>
     </svg>
   ),
@@ -42,8 +42,8 @@ export const Icons = {
       <path
         d="M7.50005 1.04999C7.74858 1.04999 7.95005 1.25146 7.95005 1.49999V8.41359L10.1819 6.18179C10.3576 6.00605 10.6425 6.00605 10.8182 6.18179C10.994 6.35753 10.994 6.64245 10.8182 6.81819L7.81825 9.81819C7.64251 9.99392 7.35759 9.99392 7.18185 9.81819L4.18185 6.81819C4.00611 6.64245 4.00611 6.35753 4.18185 6.18179C4.35759 6.00605 4.64251 6.00605 4.81825 6.18179L7.05005 8.41359V1.49999C7.05005 1.25146 7.25152 1.04999 7.50005 1.04999ZM2.5 10C2.77614 10 3 10.2239 3 10.5V12C3 12.5539 3.44565 13 3.99635 13H11.0012C11.5529 13 12 12.5528 12 12V10.5C12 10.2239 12.2239 10 12.5 10C12.7761 10 13 10.2239 13 10.5V12C13 13.1041 12.1062 14 11.0012 14H3.99635C2.89019 14 2 13.103 2 12V10.5C2 10.2239 2.22386 10 2.5 10Z"
         fill="currentColor"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
       ></path>
     </svg>
   ),
@@ -101,8 +101,8 @@ export const Icons = {
       <path
         d="M8.51194 3.00541C9.18829 2.54594 10.0435 2.53694 10.6788 2.95419C10.8231 3.04893 10.9771 3.1993 11.389 3.61119C11.8009 4.02307 11.9513 4.17714 12.046 4.32141C12.4633 4.95675 12.4543 5.81192 11.9948 6.48827C11.8899 6.64264 11.7276 6.80811 11.3006 7.23511L10.6819 7.85383C10.4867 8.04909 10.4867 8.36567 10.6819 8.56093C10.8772 8.7562 11.1938 8.7562 11.389 8.56093L12.0077 7.94221L12.0507 7.89929C12.4203 7.52976 12.6568 7.2933 12.822 7.0502C13.4972 6.05623 13.5321 4.76252 12.8819 3.77248C12.7233 3.53102 12.4922 3.30001 12.1408 2.94871L12.0961 2.90408L12.0515 2.85942C11.7002 2.508 11.4692 2.27689 11.2277 2.11832C10.2377 1.46813 8.94398 1.50299 7.95001 2.17822C7.70691 2.34336 7.47044 2.57991 7.1009 2.94955L7.058 2.99247L6.43928 3.61119C6.24401 3.80645 6.24401 4.12303 6.43928 4.31829C6.63454 4.51355 6.95112 4.51355 7.14638 4.31829L7.7651 3.69957C8.1921 3.27257 8.35757 3.11027 8.51194 3.00541ZM4.31796 7.14672C4.51322 6.95146 4.51322 6.63487 4.31796 6.43961C4.12269 6.24435 3.80611 6.24435 3.61085 6.43961L2.99213 7.05833L2.94922 7.10124C2.57957 7.47077 2.34303 7.70724 2.17788 7.95035C1.50265 8.94432 1.4678 10.238 2.11799 11.2281C2.27656 11.4695 2.50766 11.7005 2.8591 12.0518L2.90374 12.0965L2.94837 12.1411C3.29967 12.4925 3.53068 12.7237 3.77214 12.8822C4.76219 13.5324 6.05589 13.4976 7.04986 12.8223C7.29296 12.6572 7.52943 12.4206 7.89896 12.051L7.89897 12.051L7.94188 12.0081L8.5606 11.3894C8.75586 11.1941 8.75586 10.8775 8.5606 10.6823C8.36533 10.487 8.04875 10.487 7.85349 10.6823L7.23477 11.301C6.80777 11.728 6.6423 11.8903 6.48794 11.9951C5.81158 12.4546 4.95642 12.4636 4.32107 12.0464C4.17681 11.9516 4.02274 11.8012 3.61085 11.3894C3.19896 10.9775 3.0486 10.8234 2.95385 10.6791C2.53661 10.0438 2.54561 9.18863 3.00507 8.51227C3.10993 8.35791 3.27224 8.19244 3.69924 7.76544L4.31796 7.14672ZM9.62172 6.08558C9.81698 5.89032 9.81698 5.57373 9.62172 5.37847C9.42646 5.18321 9.10988 5.18321 8.91461 5.37847L5.37908 8.91401C5.18382 9.10927 5.18382 9.42585 5.37908 9.62111C5.57434 9.81637 5.89092 9.81637 6.08619 9.62111L9.62172 6.08558Z"
         fill="currentColor"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
       ></path>
     </svg>
   ),
@@ -118,8 +118,8 @@ export const Icons = {
       <path
         d="M2 1C1.44772 1 1 1.44772 1 2V13C1 13.5523 1.44772 14 2 14H13C13.5523 14 14 13.5523 14 13V2C14 1.44772 13.5523 1 13 1H2ZM3.05 6H4.95V12H3.05V6ZM5.075 4.005C5.075 4.59871 4.59371 5.08 4 5.08C3.4063 5.08 2.925 4.59871 2.925 4.005C2.925 3.41129 3.4063 2.93 4 2.93C4.59371 2.93 5.075 3.41129 5.075 4.005ZM12 8.35713C12 6.55208 10.8334 5.85033 9.67449 5.85033C9.29502 5.83163 8.91721 5.91119 8.57874 6.08107C8.32172 6.21007 8.05265 6.50523 7.84516 7.01853H7.79179V6.00044H6V12.0047H7.90616V8.8112C7.8786 8.48413 7.98327 8.06142 8.19741 7.80987C8.41156 7.55832 8.71789 7.49825 8.95015 7.46774H9.02258C9.62874 7.46774 10.0786 7.84301 10.0786 8.78868V12.0047H11.9847L12 8.35713Z"
         fill="currentColor"
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
       ></path>
     </svg>
   ),
@@ -139,8 +139,8 @@ export const Icons = {
           y1="115.276%"
           y2="41.364%"
         >
-          <stop offset="0%" stop-color="#FFEED7"></stop>
-          <stop offset="100%" stop-color="#BDBFC2"></stop>
+          <stop offset="0%" stopColor="#FFEED7"></stop>
+          <stop offset="100%" stopColor="#BDBFC2"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTux1"
@@ -149,8 +149,8 @@ export const Icons = {
           y1="2.404%"
           y2="90.542%"
         >
-          <stop offset="0%" stop-color="#FFF" stop-opacity=".8"></stop>
-          <stop offset="100%" stop-color="#FFF" stop-opacity="0"></stop>
+          <stop offset="0%" stopColor="#FFF" stopOpacity=".8"></stop>
+          <stop offset="100%" stopColor="#FFF" stopOpacity="0"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTux2"
@@ -159,8 +159,8 @@ export const Icons = {
           y1="88.248%"
           y2="9.748%"
         >
-          <stop offset="0%" stop-color="#FFEED7"></stop>
-          <stop offset="100%" stop-color="#BDBFC2"></stop>
+          <stop offset="0%" stopColor="#FFEED7"></stop>
+          <stop offset="100%" stopColor="#BDBFC2"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTux3"
@@ -169,8 +169,8 @@ export const Icons = {
           y1="85.49%"
           y2="13.811%"
         >
-          <stop offset="0%" stop-color="#FFEED7"></stop>
-          <stop offset="100%" stop-color="#BDBFC2"></stop>
+          <stop offset="0%" stopColor="#FFEED7"></stop>
+          <stop offset="100%" stopColor="#BDBFC2"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTux4"
@@ -179,8 +179,8 @@ export const Icons = {
           y1="3.102%"
           y2="93.895%"
         >
-          <stop offset="0%" stop-color="#FFF" stop-opacity=".65"></stop>
-          <stop offset="100%" stop-color="#FFF" stop-opacity="0"></stop>
+          <stop offset="0%" stopColor="#FFF" stopOpacity=".65"></stop>
+          <stop offset="100%" stopColor="#FFF" stopOpacity="0"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTux5"
@@ -189,8 +189,8 @@ export const Icons = {
           y1="5.475%"
           y2="93.524%"
         >
-          <stop offset="0%" stop-color="#FFF" stop-opacity=".65"></stop>
-          <stop offset="100%" stop-color="#FFF" stop-opacity="0"></stop>
+          <stop offset="0%" stopColor="#FFF" stopOpacity=".65"></stop>
+          <stop offset="100%" stopColor="#FFF" stopOpacity="0"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTux6"
@@ -199,8 +199,8 @@ export const Icons = {
           y1="89.845%"
           y2="40.632%"
         >
-          <stop offset="0%" stop-color="#FFEED7"></stop>
-          <stop offset="100%" stop-color="#BDBFC2"></stop>
+          <stop offset="0%" stopColor="#FFEED7"></stop>
+          <stop offset="100%" stopColor="#BDBFC2"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTux7"
@@ -209,8 +209,8 @@ export const Icons = {
           y1="99.975%"
           y2="23.545%"
         >
-          <stop offset="0%" stop-color="#FFEED7"></stop>
-          <stop offset="100%" stop-color="#BDBFC2"></stop>
+          <stop offset="0%" stopColor="#FFEED7"></stop>
+          <stop offset="100%" stopColor="#BDBFC2"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTux8"
@@ -219,8 +219,8 @@ export const Icons = {
           y1="13.229%"
           y2="94.673%"
         >
-          <stop offset="0%" stop-color="#FFF" stop-opacity=".8"></stop>
-          <stop offset="100%" stop-color="#FFF" stop-opacity="0"></stop>
+          <stop offset="0%" stopColor="#FFF" stopOpacity=".8"></stop>
+          <stop offset="100%" stopColor="#FFF" stopOpacity="0"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTux9"
@@ -229,8 +229,8 @@ export const Icons = {
           y1="37.327%"
           y2="92.782%"
         >
-          <stop offset="0%" stop-color="#FFF" stop-opacity=".65"></stop>
-          <stop offset="100%" stop-color="#FFF" stop-opacity="0"></stop>
+          <stop offset="0%" stopColor="#FFF" stopOpacity=".65"></stop>
+          <stop offset="100%" stopColor="#FFF" stopOpacity="0"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTuxa"
@@ -239,8 +239,8 @@ export const Icons = {
           y1="2.299%"
           y2="81.204%"
         >
-          <stop offset="0%" stop-color="#FFF" stop-opacity=".65"></stop>
-          <stop offset="100%" stop-color="#FFF" stop-opacity="0"></stop>
+          <stop offset="0%" stopColor="#FFF" stopOpacity=".65"></stop>
+          <stop offset="100%" stopColor="#FFF" stopOpacity="0"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTuxb"
@@ -249,8 +249,8 @@ export const Icons = {
           y1="2.272%"
           y2="71.799%"
         >
-          <stop offset="0%" stop-color="#FFF" stop-opacity=".65"></stop>
-          <stop offset="100%" stop-color="#FFF" stop-opacity="0"></stop>
+          <stop offset="0%" stopColor="#FFF" stopOpacity=".65"></stop>
+          <stop offset="100%" stopColor="#FFF" stopOpacity="0"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTuxc"
@@ -259,8 +259,8 @@ export const Icons = {
           y1="48.921%"
           y2="98.1%"
         >
-          <stop offset="0%" stop-color="#FFA63F"></stop>
-          <stop offset="100%" stop-color="#FF0"></stop>
+          <stop offset="0%" stopColor="#FFA63F"></stop>
+          <stop offset="100%" stopColor="#FF0"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTuxd"
@@ -269,8 +269,8 @@ export const Icons = {
           y1="143.009%"
           y2="-64.622%"
         >
-          <stop offset="0%" stop-color="#FFEED7"></stop>
-          <stop offset="100%" stop-color="#BDBFC2"></stop>
+          <stop offset="0%" stopColor="#FFEED7"></stop>
+          <stop offset="100%" stopColor="#BDBFC2"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTuxe"
@@ -279,8 +279,8 @@ export const Icons = {
           y1="34.024%"
           y2="89.175%"
         >
-          <stop offset="0%" stop-color="#FFA63F"></stop>
-          <stop offset="100%" stop-color="#FF0"></stop>
+          <stop offset="0%" stopColor="#FFA63F"></stop>
+          <stop offset="100%" stopColor="#FF0"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTuxf"
@@ -289,8 +289,8 @@ export const Icons = {
           y1="-17.216%"
           y2="66.118%"
         >
-          <stop offset="0%" stop-color="#FFF" stop-opacity=".65"></stop>
-          <stop offset="100%" stop-color="#FFF" stop-opacity="0"></stop>
+          <stop offset="0%" stopColor="#FFF" stopOpacity=".65"></stop>
+          <stop offset="100%" stopColor="#FFF" stopOpacity="0"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTuxg"
@@ -299,8 +299,8 @@ export const Icons = {
           y1="1.565%"
           y2="104.313%"
         >
-          <stop offset="0%" stop-color="#FFF" stop-opacity=".65"></stop>
-          <stop offset="100%" stop-color="#FFF" stop-opacity="0"></stop>
+          <stop offset="0%" stopColor="#FFF" stopOpacity=".65"></stop>
+          <stop offset="100%" stopColor="#FFF" stopOpacity="0"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTuxh"
@@ -309,8 +309,8 @@ export const Icons = {
           y1="4.533%"
           y2="92.827%"
         >
-          <stop offset="0%" stop-color="#FFF" stop-opacity=".65"></stop>
-          <stop offset="100%" stop-color="#FFF" stop-opacity="0"></stop>
+          <stop offset="0%" stopColor="#FFF" stopOpacity=".65"></stop>
+          <stop offset="100%" stopColor="#FFF" stopOpacity="0"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTuxi"
@@ -319,8 +319,8 @@ export const Icons = {
           y1="17.609%"
           y2="99.385%"
         >
-          <stop offset="0%" stop-color="#FFA63F"></stop>
-          <stop offset="100%" stop-color="#FF0"></stop>
+          <stop offset="0%" stopColor="#FFA63F"></stop>
+          <stop offset="100%" stopColor="#FF0"></stop>
         </linearGradient>
         <linearGradient
           id="logosLinuxTuxj"
@@ -329,8 +329,8 @@ export const Icons = {
           y1="2.89%"
           y2="94.17%"
         >
-          <stop offset="0%" stop-color="#FFF" stop-opacity=".65"></stop>
-          <stop offset="100%" stop-color="#FFF" stop-opacity="0"></stop>
+          <stop offset="0%" stopColor="#FFF" stopOpacity=".65"></stop>
+          <stop offset="100%" stopColor="#FFF" stopOpacity="0"></stop>
         </linearGradient>
         <filter
           id="logosLinuxTuxk"
@@ -351,7 +351,7 @@ export const Icons = {
       <g fill="none">
         <path
           fill="#000"
-          fill-opacity=".2"
+          fillOpacity=".2"
           d="M235.125 249.359c0 17.355-52.617 31.497-117.54 31.497S.044 266.806.044 249.359c0-17.356 52.618-31.498 117.54-31.498c64.924 0 117.45 14.142 117.541 31.498"
           filter="url(#logosLinuxTuxk)"
           transform="translate(10)"
@@ -368,7 +368,7 @@ export const Icons = {
         <path
           fill="#000"
           stroke="#000"
-          stroke-width=".977"
+          strokeWidth=".977"
           d="M176.805 117.86c13.59 11.02 38.292 49.587 2.204 74.748c-11.846 7.806 10.468 32.508 23.049 19.927c43.618-43.894-1.102-94.308-16.53-111.664c-13.774-15.151-25.987 3.49-8.723 16.989z"
         ></path>
         <path
@@ -413,7 +413,7 @@ export const Icons = {
         <path
           fill="#000"
           stroke="#000"
-          stroke-width="1.25"
+          strokeWidth="1.25"
           d="M79.925 122.727c-8.907 14.509-30.211 48.669-1.652 66.484c38.384 23.6 27.548 47.108-7.53 25.895c-49.404-29.568-5.97-89.257 13.774-112.03c22.59-25.529 4.316 4.683-4.592 19.65z"
         ></path>
         <path
@@ -439,7 +439,7 @@ export const Icons = {
         <path
           fill="url(#logosLinuxTuxc)"
           stroke="#E68C3F"
-          stroke-width="6.25"
+          strokeWidth="6.25"
           d="M51.835 258.542c-20.57-10.928-50.414 2.112-39.578-27.457c2.204-6.704-3.214-16.805.275-23.325c4.133-7.989 13.04-6.244 18.366-11.57c5.234-5.51 8.54-15.06 18.366-13.59c9.734 1.468 16.254 13.406 23.049 28.099c5.05 10.468 22.865 25.253 21.672 37.007c-1.47 17.998-21.948 21.396-42.15 10.836z"
           transform="translate(10)"
         ></path>
@@ -451,7 +451,7 @@ export const Icons = {
         <path
           fill="url(#logosLinuxTuxe)"
           stroke="#E68C3F"
-          stroke-width="6.251"
+          strokeWidth="6.251"
           d="M194.445 253.49c15.06-18.273 48.578-14.508 25.988-39.577c-4.775-5.418-3.306-16.989-9.183-21.947c-6.887-6.061-14.509-1.102-21.488-4.224c-6.979-3.398-14.325-9.918-22.865-5.327c-8.54 4.684-9.459 16.805-10.285 32.783c-.735 11.479-11.203 30.671-5.602 41.231c8.081 16.346 29.11 14.142 43.435-2.938z"
           transform="translate(10)"
         ></path>
@@ -477,13 +477,13 @@ export const Icons = {
         <path
           fill="url(#logosLinuxTuxi)"
           stroke="#E68C3F"
-          stroke-width="3.75"
+          strokeWidth="3.75"
           d="M97.107 66.344c3.673-3.398 12.58-13.774 29.477-2.939c3.122 2.02 5.693 2.204 11.662 4.775c12.03 4.96 6.336 16.897-6.52 20.937c-5.51 1.745-10.468 8.449-20.386 7.806c-8.54-.46-10.744-6.06-15.978-9.091c-9.275-5.234-10.652-12.305-5.602-16.07c5.051-3.765 6.98-5.143 7.347-5.418z"
           transform="translate(10)"
         ></path>
         <path
           stroke="#E68C3F"
-          stroke-width="2.5"
+          strokeWidth="2.5"
           d="M148.43 75.986c-5.05.275-15.979 11.203-27.457 11.203c-11.479 0-18.366-10.652-20.11-10.652"
         ></path>
         <path
@@ -502,9 +502,9 @@ export const Icons = {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       className="lucide lucide-mail"
       {...props}
     >
@@ -548,10 +548,10 @@ export const Icons = {
     <svg
       viewBox="0 0 512 512"
       xmlns="http://www.w3.org/2000/svg"
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      stroke-linejoin="round"
-      stroke-miterlimit="2"
+      fillRule="evenodd"
+      clipRule="evenodd"
+      strokeLinejoin="round"
+      strokeMiterlimit="2"
       {...props}
     >
       <g transform="translate(.722 .64) scale(6.375)">
@@ -559,7 +559,7 @@ export const Icons = {
         <path
           d="M66.448 70.009L30.73 24H24v31.987h5.384v-25.15l32.838 42.427a40.116 40.116 0 004.226-3.255z"
           fill="url(#prefix___Linear1)"
-          fill-rule="nonzero"
+          fillRule="nonzero"
         ></path>
         <path
           fill="url(#prefix___Linear2)"
@@ -576,8 +576,8 @@ export const Icons = {
           gradientUnits="userSpaceOnUse"
           gradientTransform="rotate(51.103 -29.93 76.555) scale(25.1269)"
         >
-          <stop offset="0" stop-color="#fff"></stop>
-          <stop offset="1" stop-color="#fff" stop-opacity="0"></stop>
+          <stop offset="0" stopColor="#fff"></stop>
+          <stop offset="1" stopColor="#fff" stopOpacity="0"></stop>
         </linearGradient>
         <linearGradient
           id="prefix___Linear2"
@@ -588,8 +588,8 @@ export const Icons = {
           gradientUnits="userSpaceOnUse"
           gradientTransform="rotate(90.218 14.934 38.787) scale(23.50017)"
         >
-          <stop offset="0" stop-color="#fff"></stop>
-          <stop offset="1" stop-color="#fff" stop-opacity="0"></stop>
+          <stop offset="0" stopColor="#fff"></stop>
+          <stop offset="1" stopColor="#fff" stopOpacity="0"></stop>
         </linearGradient>
       </defs>
     </svg>
@@ -611,11 +611,11 @@ export const Icons = {
           y1="17.487%"
           y2="89.755%"
         >
-          <stop offset="0%" stop-color="#41873F"></stop>
-          <stop offset="32.88%" stop-color="#418B3D"></stop>
-          <stop offset="63.52%" stop-color="#419637"></stop>
-          <stop offset="93.19%" stop-color="#3FA92D"></stop>
-          <stop offset="100%" stop-color="#3FAE2A"></stop>
+          <stop offset="0%" stopColor="#41873F"></stop>
+          <stop offset="32.88%" stopColor="#418B3D"></stop>
+          <stop offset="63.52%" stopColor="#419637"></stop>
+          <stop offset="93.19%" stopColor="#3FA92D"></stop>
+          <stop offset="100%" stopColor="#3FAE2A"></stop>
         </linearGradient>
         <linearGradient
           id="c"
@@ -624,10 +624,10 @@ export const Icons = {
           y1="55.169%"
           y2="-18.306%"
         >
-          <stop offset="13.76%" stop-color="#41873F"></stop>
-          <stop offset="40.32%" stop-color="#54A044"></stop>
-          <stop offset="71.36%" stop-color="#66B848"></stop>
-          <stop offset="90.81%" stop-color="#6CC04A"></stop>
+          <stop offset="13.76%" stopColor="#41873F"></stop>
+          <stop offset="40.32%" stopColor="#54A044"></stop>
+          <stop offset="71.36%" stopColor="#66B848"></stop>
+          <stop offset="90.81%" stopColor="#6CC04A"></stop>
         </linearGradient>
         <linearGradient
           id="f"
@@ -636,10 +636,10 @@ export const Icons = {
           y1="49.997%"
           y2="49.997%"
         >
-          <stop offset="9.192%" stop-color="#6CC04A"></stop>
-          <stop offset="28.64%" stop-color="#66B848"></stop>
-          <stop offset="59.68%" stop-color="#54A044"></stop>
-          <stop offset="86.24%" stop-color="#41873F"></stop>
+          <stop offset="9.192%" stopColor="#6CC04A"></stop>
+          <stop offset="28.64%" stopColor="#66B848"></stop>
+          <stop offset="59.68%" stopColor="#54A044"></stop>
+          <stop offset="86.24%" stopColor="#41873F"></stop>
         </linearGradient>
         <path
           id="b"
@@ -744,8 +744,8 @@ export const Icons = {
           y2="67.556%"
           id="gradient"
         >
-          <stop stop-color="#2298BD" offset="0%"></stop>
-          <stop stop-color="#0ED7B5" offset="100%"></stop>
+          <stop stopColor="#2298BD" offset="0%"></stop>
+          <stop stopColor="#0ED7B5" offset="100%"></stop>
         </linearGradient>
       </defs>
       <path
@@ -776,16 +776,14 @@ export const Icons = {
   x: (props: IconProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="1200"
-      height="1227"
-      fill="none"
-      viewBox="0 0 1200 1227"
+      width="16"
+      height="16"
+      fill="currentColor"
+      className="bi bi-twitter-x"
+      viewBox="0 0 16 16"
       {...props}
     >
-      <path
-        fill="#fff"
-        d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z"
-      />
+      <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
     </svg>
   ),
-}
+};
