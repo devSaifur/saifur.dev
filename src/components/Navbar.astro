@@ -1,23 +1,37 @@
+---
+const navLinks = [
+  {
+    name: 'Home',
+    href: '/',
+  },
+  {
+    name: 'Blogs',
+    href: '/blogs',
+  },
+  {
+    name: 'Projects',
+    href: '/projects',
+  },
+]
+---
+
 <nav
   class="fixed left-0 right-0 z-50 flex list-none justify-center pt-3 text-sm font-semibold text-sky-200/95 transition-transform delay-150 duration-300 ease-in-out md:text-base"
 >
   <ul
     class="relative my-auto flex gap-x-4 rounded-lg bg-stone-900 px-5 py-4 shadow-[0_10px_20px_rgba(15,_118,_110,_0.7)] md:gap-x-6"
   >
-    <a
-      href="/"
-      class="nav-link z-20 cursor-pointer rounded-xl px-4 py-1 md:px-5">Home</a
-    >
-    <a
-      href="/blogs"
-      class="nav-link z-20 cursor-pointer rounded-xl px-4 py-1 md:px-5">Blogs</a
-    >
-    <a
-      href="/projects"
-      class="nav-link z-20 cursor-pointer rounded-xl px-4 py-1 md:px-5"
-      >Projects</a
-    >
-
+    {
+      navLinks.map((link) => (
+        <a
+          href={link.href}
+          class="z-20 cursor-pointer rounded-xl px-4 py-1 md:px-5"
+          id="nav-link"
+        >
+          {link.name}
+        </a>
+      ))
+    }
     <div
       id="background-slide"
       class="absolute left-0 top-2.5 h-4/6 rounded-lg bg-teal-700 transition-all delay-150 duration-300 ease-in-out"
@@ -33,112 +47,32 @@
 </style>
 
 <script>
-  import { animate } from 'motion/mini'
+  import { animate, inView, scroll } from 'motion'
 
   document.addEventListener('astro:page-load', () => {
-    let isVisible = true
-    let lastScrollY = 0
-
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY
-
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        isVisible = false
-      } else if (currentScrollY < lastScrollY) {
-        isVisible = true
+    const navScroll = animate(
+      'nav',
+      {
+        opacity: 0,
+        y: -200,
+      },
+      {
+        type: 'spring',
+        stiffness: 100,
+        damping: 10,
       }
+    )
 
-      lastScrollY = currentScrollY <= 0 ? 0 : currentScrollY
-    }
+    scroll(
+      (progress, info) => {
+        const perviousProgress = progress
+        console.log({ info })
 
-    window.addEventListener('scroll', handleScroll, { passive: true })
-
-    // fix the scrollbar first
-
-    // const navLinks = document.querySelectorAll('.nav-link')
-    // const navContainer = document.querySelector('nav') as HTMLElement
-    // const backgroundSlide = document.getElementById('background-slide')
-
-    // let activeLink: Element | null = null
-    // let lastScrollTop = 0
-    // let isNavVisible = true
-
-    // const updateBackgroundPosition = (link: Element) => {
-    //   const linkRect = link.getBoundingClientRect()
-    //   const navRect = link.parentElement?.getBoundingClientRect()
-    //   if (!backgroundSlide || !navRect) return
-
-    //   backgroundSlide.style.width = `${linkRect.width}px`
-    //   backgroundSlide.style.transform = `translateX(${linkRect.left - navRect.left}px)`
-    // }
-
-    // const setActiveLink = (link: Element) => {
-    //   if (activeLink) {
-    //     activeLink.classList.remove('text-white')
-    //   }
-    //   activeLink = link
-    //   activeLink.classList.add('text-white')
-    //   updateBackgroundPosition(link)
-    // }
-
-    // const currentPath = window.location.pathname
-
-    // const initialActiveLink = Array.from(navLinks).find(
-    //   (link) => link.getAttribute('href') === currentPath
-    // )
-
-    // // Set initial position of background slide
-    // if (initialActiveLink) {
-    //   setActiveLink(initialActiveLink)
-    //   if (backgroundSlide) {
-    //     backgroundSlide.style.transition = 'none'
-    //     updateBackgroundPosition(initialActiveLink)
-    //     backgroundSlide.offsetHeight
-    //     backgroundSlide.style.transition = ''
-    //   }
-    // } else if (navLinks.length > 0) {
-    //   setActiveLink(navLinks[0] as Element)
-    // }
-
-    // navLinks.forEach((link) => {
-    //   link.addEventListener('mouseover', () => {
-    //     updateBackgroundPosition(link)
-    //   })
-
-    //   link.addEventListener('mouseleave', () => {
-    //     if (activeLink) {
-    //       updateBackgroundPosition(activeLink)
-    //     }
-    //   })
-
-    //   link.addEventListener('click', () => {
-    //     setActiveLink(link)
-    //   })
-    // })
-
-    // // Smart scroll functionality
-    // const handleScroll = () => {
-    //   const scrollTop = window.scrollY || document.documentElement.scrollTop
-
-    //   if (scrollTop > lastScrollTop && isNavVisible && scrollTop > 50) {
-    //     // Scrolling down & navbar is visible
-    //     navContainer.classList.add('nav-hidden')
-    //     isNavVisible = false
-    //   } else if (scrollTop < lastScrollTop && !isNavVisible) {
-    //     // Scrolling up & navbar is hidden
-    //     navContainer.classList.remove('nav-hidden')
-    //     isNavVisible = true
-    //   }
-
-    //   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop // For Mobile or negative scrolling
-    // }
-
-    // // Show navbar initially
-    // setTimeout(() => {
-    //   navContainer.style.display = 'flex'
-    //   navContainer.classList.remove('nav-hidden')
-    // }, 100)
-
-    // window.addEventListener('scroll', handleScroll, { passive: true })
+        if (progress > 0.1) {
+          navScroll.play()
+        }
+      },
+      { axis: 'y' }
+    )
   })
 </script>

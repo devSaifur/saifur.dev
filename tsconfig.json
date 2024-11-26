@@ -5,8 +5,8 @@
     "moduleDetection": "force",
     "module": "Preserve",
     "verbatimModuleSyntax": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "react",
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"]
