@@ -43,7 +43,7 @@ export function Navbar() {
             initial={false}
             animate={{
               x: `calc(${activeIndex * 100}% + ${activeIndex * 0.25}rem)`,
-              width: `calc(${100 / navItems.length}% - 0.25rem)`
+              width: `calc(${100 / navItems.length}% - 0.15rem)`
             }}
             transition={{ type: 'spring', stiffness: 400, damping: 30 }}
           />

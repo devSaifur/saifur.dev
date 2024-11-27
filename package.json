@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -14,11 +14,12 @@
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts"
   },
   "dependencies": {
+    "@radix-ui/react-tooltip": "^1.1.4",
     "clsx": "^2.1.1",
-    "motion": "12.0.0-alpha.2",
-    "next": "^15.0.3",
-    "react": "19.0.0-rc-fb9a90fa48-20240614",
-    "react-dom": "19.0.0-rc-fb9a90fa48-20240614",
+    "motion": "^11.12.0",
+    "next": "^14.2.18",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "tailwind-merge": "^2.5.5"
   },
   "devDependencies": {
@@ -31,15 +32,16 @@
     "@types/node": "^20.17.8",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "eslint": "^9.15.0",
+    "eslint": "^8.57.1",
     "eslint-config-next": "14.2.5",
     "eslint-plugin-next-on-pages": "^1.13.5",
     "postcss": "^8.4.49",
     "prettier": "^3.4.1",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.4.15",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.7.2",
-    "vercel": "^39.1.1",
+    "vercel": "^39.1.2",
     "wrangler": "^3.91.0"
   },
   "prettier": {
