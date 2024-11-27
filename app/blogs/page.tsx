@@ -1,6 +1,7 @@
-import { allPosts } from "content-collections";
-import Link from "next/link";
-import { Icons } from "../components/ui/icons";
+import Link from 'next/link'
+import { allPosts } from 'content-collections'
+
+import { Icons } from '../components/ui/icons'
 
 export default function Page() {
   return (
@@ -23,5 +24,5 @@ export default function Page() {
         </Link>
       ))}
     </main>
-  );
+  )
 }

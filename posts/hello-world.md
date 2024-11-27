@@ -1,6 +1,6 @@
 ---
-title: "Hello world"
-date: "27 Nov, 2024"
+title: 'Hello world'
+date: '27 Nov, 2024'
 ---
 
 # Hello world

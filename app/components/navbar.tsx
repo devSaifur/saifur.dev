@@ -1,38 +1,72 @@
-import Link from "next/link";
+'use client'
 
-const navLinks = [
-  {
-    name: "Home",
-    href: "/",
-  },
-  {
-    name: "Blogs",
-    href: "/blogs",
-  },
-  {
-    name: "Projects",
-    href: "/projects",
-  },
-];
+import { useState } from 'react'
+import Link from 'next/link'
+import { motion, useMotionValueEvent, useScroll } from 'motion/react'
+
+import { cn } from '@/lib/utils'
+
+const navItems = [
+  { name: 'Home', href: '/' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Blogs', href: '/blogs' }
+]
 
 export function Navbar() {
+  const { scrollY } = useScroll()
+  const [hidden, setHidden] = useState(false)
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    const previous = scrollY.getPrevious() as number
+    if (latest > previous && latest > 150) {
+      setHidden(true)
+    } else {
+      setHidden(false)
+    }
+  })
+
   return (
-    <nav className="fixed left-0 right-0 z-50 flex list-none justify-center pt-3 text-sm font-semibold text-sky-200/95 transition-transform delay-150 duration-300 ease-in-out md:text-base">
-      <ul className="relative my-auto flex gap-x-4 rounded-lg bg-stone-900 px-5 py-4 shadow-[0_10px_20px_rgba(15,_118,_110,_0.7)] md:gap-x-6">
-        {navLinks.map((link) => (
-          <Link
-            href={link.href}
-            className="z-20 cursor-pointer rounded-xl px-4 py-1 md:px-5"
-            key={link.name}
-          >
-            {link.name}
-          </Link>
-        ))}
-        <div
-          id="background-slide"
-          className="absolute left-0 top-2.5 h-4/6 rounded-lg bg-teal-700 transition-all delay-150 duration-300 ease-in-out"
-        ></div>
-      </ul>
-    </nav>
-  );
+    <motion.div
+      className="fixed left-0 right-0 top-3 z-50 flex justify-center"
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: '-120%' }
+      }}
+      animate={hidden ? 'hidden' : 'visible'}
+      transition={{ duration: 0.35, ease: 'easeInOut' }}
+    >
+      <nav className="mx-auto w-full max-w-80 rounded-lg bg-stone-900/90 px-4 py-3 shadow-[0_10px_20px_rgba(15,_118,_110,_0.7)] sm:max-w-sm">
+        <ul className="relative flex justify-center space-x-1">
+          <motion.div
+            className="absolute inset-0 z-0 rounded-md bg-teal-700"
+            initial={false}
+            animate={{
+              x: `calc(${activeIndex * 100}% + ${activeIndex * 0.25}rem)`,
+              width: `calc(${100 / navItems.length}% - 0.25rem)`
+            }}
+            transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+          />
+          {navItems.map((item, index) => (
+            <li key={item.name} className="relative z-10 flex-1">
+              <Link
+                href={item.href}
+                className={cn(
+                  'block rounded-md py-2 text-center text-sm font-semibold transition-colors duration-200 md:text-base',
+                  activeIndex === index
+                    ? 'text-white'
+                    : 'text-cyan-300 hover:text-cyan-900'
+                )}
+                onClick={() => {
+                  setActiveIndex(index)
+                }}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </motion.div>
+  )
 }

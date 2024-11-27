@@ -1,10 +1,10 @@
-import { BgGrid } from "./components/ui/bg-grid";
-import { Wrapper } from "./components/ui/wrapper";
-import { Hero } from "./components/hero";
-import { Skills } from "./components/skills";
-import { Projects } from "./components/projects";
-import { Footer } from "./components/footer";
-import { Posts } from "./components/posts";
+import { BgGrid } from '@/components/ui/bg-grid'
+import { Wrapper } from '@/components/ui/wrapper'
+import { Footer } from '@/components/footer'
+import { Hero } from '@/components/hero'
+import { Posts } from '@/components/posts'
+import { Projects } from '@/components/projects'
+import { Skills } from '@/components/skills'
 
 export default function Home() {
   return (
@@ -24,5 +24,5 @@ export default function Home() {
         </main>
       </Wrapper>
     </>
-  );
+  )
 }

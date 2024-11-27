@@ -19,7 +19,7 @@ export function BgGrid() {
           : undefined,
         WebkitMaskImage: true
           ? `radial-gradient(ellipse at top, white, transparent 70%)`
-          : undefined,
+          : undefined
       }}
     ></div>
   )

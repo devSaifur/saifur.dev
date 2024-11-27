@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Icons } from './ui/icons'
+
+import { Icons } from '@/components/ui/icons'
 
 export function Socials() {
   return (
@@ -43,7 +44,7 @@ export function Socials() {
         </Link>
         <button
           id="cv"
-          className="text-primary mb-2 inline-flex items-center justify-center whitespace-nowrap rounded-full bg-accent/70 px-4 py-2 text-xs font-bold text-black shadow hover:bg-accent/60 focus-visible:outline-none focus-visible:ring-1 sm:text-sm"
+          className="text-primary inline-flex items-center justify-center whitespace-nowrap rounded-full bg-accent/70 px-4 py-2 text-xs font-bold text-black shadow hover:bg-accent/60 focus-visible:outline-none focus-visible:ring-1 sm:text-sm"
         >
           <Icons.download className="mr-1 size-4" />
           CV

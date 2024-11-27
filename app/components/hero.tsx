@@ -1,4 +1,6 @@
 import Image from 'next/image'
+
+import { Clock } from './clock'
 import { Socials } from './socials'
 
 export function Hero() {
@@ -38,7 +40,7 @@ export function Hero() {
           <div className="space-y-2">
             <p className="text-2xl font-semibold text-cyan-400">Saifur</p>
             <p className="text-xl text-accent">Online (probably)</p>
-            {/* <Time /> */}
+            <Clock />
           </div>
         </div>
       </div>

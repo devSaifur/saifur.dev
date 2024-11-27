@@ -1,55 +1,55 @@
-import { Icons } from "./ui/icons";
+import { Icons } from '@/components/ui/icons'
 
 const config = [
   {
-    name: "Javascript",
-    icon: <Icons.js className="size-5 sm:size-6 lg:size-8" />,
+    name: 'Javascript',
+    icon: <Icons.js className="size-5 sm:size-6 lg:size-8" />
   },
   {
-    name: "Tailwind",
-    icon: <Icons.tailwind className="size-5 sm:size-6 lg:size-8" />,
+    name: 'Tailwind',
+    icon: <Icons.tailwind className="size-5 sm:size-6 lg:size-8" />
   },
   {
-    name: "React",
-    icon: <Icons.react className="size-5 sm:size-6 lg:size-8" />,
+    name: 'React',
+    icon: <Icons.react className="size-5 sm:size-6 lg:size-8" />
   },
   {
-    name: "Typescript",
-    icon: <Icons.ts className="size-5 sm:size-6 lg:size-8" />,
+    name: 'Typescript',
+    icon: <Icons.ts className="size-5 sm:size-6 lg:size-8" />
   },
   {
-    name: "Node.js",
-    icon: <Icons.nodejs className="size-5 sm:size-6 lg:size-8" />,
+    name: 'Node.js',
+    icon: <Icons.nodejs className="size-5 sm:size-6 lg:size-8" />
   },
   {
-    name: "Express.js",
-    icon: <Icons.express className="size-5 sm:size-6 lg:size-8" />,
+    name: 'Express.js',
+    icon: <Icons.express className="size-5 sm:size-6 lg:size-8" />
   },
   {
-    name: "MongoDB",
-    icon: <Icons.mongodb className="size-5 sm:size-6 lg:size-8" />,
+    name: 'MongoDB',
+    icon: <Icons.mongodb className="size-5 sm:size-6 lg:size-8" />
   },
   {
-    name: "Next.js",
-    icon: <Icons.nextjs className="size-5 sm:size-6 lg:size-8" />,
+    name: 'Next.js',
+    icon: <Icons.nextjs className="size-5 sm:size-6 lg:size-8" />
   },
   {
-    name: "PostgreSQL",
-    icon: <Icons.postgres className="size-5 sm:size-6 lg:size-8" />,
+    name: 'PostgreSQL',
+    icon: <Icons.postgres className="size-5 sm:size-6 lg:size-8" />
   },
   {
-    name: "Python",
-    icon: <Icons.python className="size-5 sm:size-6 lg:size-8" />,
+    name: 'Python',
+    icon: <Icons.python className="size-5 sm:size-6 lg:size-8" />
   },
   {
-    name: "Docker",
-    icon: <Icons.docker className="size-5 sm:size-6 lg:size-8" />,
+    name: 'Docker',
+    icon: <Icons.docker className="size-5 sm:size-6 lg:size-8" />
   },
   {
-    name: "Linux",
-    icon: <Icons.linux className="size-5 sm:size-6 lg:size-8" />,
-  },
-];
+    name: 'Linux',
+    icon: <Icons.linux className="size-5 sm:size-6 lg:size-8" />
+  }
+]
 
 export function Skills() {
   return (
@@ -70,5 +70,5 @@ export function Skills() {
         ))}
       </div>
     </section>
-  );
+  )
 }

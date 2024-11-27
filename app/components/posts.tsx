@@ -1,6 +1,7 @@
-import { allPosts } from "content-collections";
-import { Icons } from "./ui/icons";
-import Link from "next/link";
+import Link from 'next/link'
+import { allPosts } from 'content-collections'
+
+import { Icons } from './ui/icons'
 
 export function Posts() {
   return (
@@ -28,5 +29,5 @@ export function Posts() {
         ))}
       </div>
     </section>
-  );
+  )
 }
