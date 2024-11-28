@@ -21,6 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="1c464181-2c91-4d67-beac-8b8f24af9f3f"
+        ></script>
+      </head>
       <body
         className={`${inter.className} min-h-screen scroll-smooth bg-[rgba(30,30,46,255)] font-primary text-base antialiased`}
       >
