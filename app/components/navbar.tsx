@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { motion, useMotionValueEvent, useScroll } from 'motion/react'
 
 import { cn } from '@/lib/utils'
@@ -15,7 +16,7 @@ const navItems = [
 export function Navbar() {
   const { scrollY } = useScroll()
   const [hidden, setHidden] = useState(false)
-  const [activeIndex, setActiveIndex] = useState(0)
+  const pathname = usePathname()
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     const previous = scrollY.getPrevious() as number
@@ -25,6 +26,12 @@ export function Navbar() {
       setHidden(false)
     }
   })
+
+  const activeIndex = pathname.startsWith('/projects')
+    ? 1
+    : pathname.startsWith('/blogs')
+      ? 2
+      : 0
 
   return (
     <motion.div
@@ -55,11 +62,8 @@ export function Navbar() {
                   'block rounded-md py-2 text-center text-sm font-semibold transition-colors duration-200 md:text-base',
                   activeIndex === index
                     ? 'text-white'
-                    : 'text-cyan-300 hover:text-cyan-900'
+                    : 'text-cyan-300 hover:text-cyan-800'
                 )}
-                onClick={() => {
-                  setActiveIndex(index)
-                }}
               >
                 {item.name}
               </Link>
