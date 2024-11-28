@@ -13,7 +13,7 @@ export function ProfileImg() {
         src="/images/profile-picture.webp"
         alt="profile"
         fill={true}
-        sizes="(max-width: 768px) 30vw, 25vw"
+        sizes="(max-width: 768px) 30vw, 15vw"
         animate={{
           y: [-7, 7, -7]
         }}
