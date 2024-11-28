@@ -1,7 +1,15 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { config } from '@/configs/project'
 
 import { Icons } from '@/components/ui/icons'
+
+export const metadata: Metadata = {
+  title: 'Saifur Rahman | Projects',
+  description: 'Projects by Saifur Rahman.',
+  keywords:
+    'saifur, saifur rahman, saifur.dev, software engineer, web developer'
+}
 
 export default function Page() {
   return (
