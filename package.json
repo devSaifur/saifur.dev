@@ -11,7 +11,8 @@
     "pages:build": "pnpm next-on-pages",
     "preview": "pnpm pages:build && wrangler pages dev",
     "deploy": "pnpm pages:build && wrangler pages deploy",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts"
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
+    "unlighthouse": "pnpm dlx unlighthouse --site https://saifur.pages.dev/"
   },
   "dependencies": {
     "@radix-ui/react-tooltip": "^1.1.4",
