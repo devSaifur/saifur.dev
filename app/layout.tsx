@@ -11,18 +11,7 @@ export const metadata: Metadata = {
   title: 'Saifur Rahman',
   description: 'Saifur Rahman is a software engineer and a web developer.',
   keywords:
-    'saifur, saifur rahman, saifur.dev, software engineer, web developer',
-  openGraph: {
-    title: 'Saifur Rahman',
-    description: 'Saifur Rahman is a software engineer and a web developer.',
-    images: [
-      {
-        url: './og.webp',
-        width: 800,
-        height: 600
-      }
-    ]
-  }
+    'saifur, saifur rahman, saifur.dev, software engineer, web developer'
 }
 
 export default function RootLayout({
