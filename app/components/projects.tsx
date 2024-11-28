@@ -52,13 +52,15 @@ export function Projects() {
                 ))}
               </ul>
             </div>
-            <Image
-              src={project.image}
-              alt={project.name}
-              width="200"
-              height="150"
-              className="md:order-1' mb-auto max-w-36 rounded-md object-fill"
-            />
+            <div className="relative mb-auto h-24 w-1/2 md:order-1 md:w-11/12">
+              <Image
+                src={project.image}
+                alt={project.name}
+                fill={true}
+                sizes="(max-width: 768px) 40vw, 20vw"
+                className="rounded-md object-cover"
+              />
+            </div>
           </div>
         ))}
       </div>

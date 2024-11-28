@@ -23,13 +23,15 @@ export function Hero() {
       <div className="flex flex-col gap-y-16 lg:order-3">
         <Socials />
         <div className="hidden gap-x-6 text-start lg:flex">
-          <Image
-            src="/images/chill-guy.webp"
-            alt="chill guy"
-            width={200}
-            height={200}
-            className="size-24 rounded-lg outline outline-2 outline-accent brightness-90"
-          />
+          <div className="relative size-24">
+            <Image
+              src="/images/chill-guy.webp"
+              alt="chill guy"
+              className="rounded-lg outline outline-2 outline-accent brightness-90"
+              fill={true}
+              sizes="10vw"
+            />
+          </div>
           <div className="space-y-2">
             <p className="text-2xl font-semibold text-cyan-400">Saifur</p>
             <p className="text-xl text-accent">Online (probably)</p>
