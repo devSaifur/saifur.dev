@@ -55,7 +55,7 @@ export function Socials() {
                 <Icons.x className="size-6 cursor-pointer text-accent hover:text-accent/80 sm:size-8" />
               </TooltipTrigger>
               <TooltipContent>
-                <p>CV</p>
+                <p>X/Twitter</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
