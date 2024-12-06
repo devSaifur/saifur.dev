@@ -18,7 +18,6 @@ export async function generateMetadata({
   params
 }: MetadataProps): Promise<Metadata> {
   const { slug } = await params
-
   const post = allPosts.find((post) => post._meta.path === slug)
 
   if (!post) {
@@ -26,7 +25,6 @@ export async function generateMetadata({
       title: '404 | Saifur Rahman'
     }
   }
-
   return {
     title: `${post.title} | Saifur Rahman`
   }
