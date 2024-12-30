@@ -13,10 +13,10 @@ export function Projects() {
       </h2>
 
       <div className="grid justify-center gap-4 lg:grid-cols-2 lg:gap-10">
-        {config.map((project) => (
+        {config.slice(0, 4).map((project) => (
           <div
             id="project"
-            className="group/project mb-6 grid w-full max-w-2xl gap-y-6 rounded-md bg-stone-900/90 px-4 py-4 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)] transition-all md:mb-2 md:grid-cols-[1fr,2fr] md:gap-0 md:transition-all md:ease-in-out md:hover:scale-105 lg:hover:cursor-pointer"
+            className="group/project mb-6 grid w-full max-w-2xl gap-y-6 rounded-md bg-stone-900/90 px-4 py-4 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)] transition-all md:mb-2 md:h-52 md:grid-cols-[1fr,2fr] md:gap-0 md:transition-all md:ease-in-out md:hover:scale-105 lg:hover:cursor-pointer"
             key={project.name}
           >
             <div className="grid space-y-4 md:order-2 md:gap-2 md:space-y-3">

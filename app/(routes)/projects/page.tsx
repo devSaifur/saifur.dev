@@ -16,7 +16,8 @@ export default function Page() {
     <div className="mx-auto grid max-w-2xl gap-y-4 px-6 py-16 pt-28 text-white md:pt-40 lg:gap-y-8">
       {config.map((project) => (
         <div
-          className="group/project mb-6 grid w-full max-w-2xl gap-y-6 rounded-md bg-stone-900/90 px-4 py-4 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)] transition-all md:mb-2 md:grid-cols-[1fr,2fr] md:gap-0 md:transition-all md:ease-in-out md:hover:scale-105 lg:hover:cursor-pointer"
+          id="project"
+          className="group/project mb-6 grid w-full max-w-2xl gap-y-6 rounded-md bg-stone-900/90 px-4 py-4 shadow-[5px_5px_rgba(0,_98,_90,_0.4),_10px_10px_rgba(0,_98,_90,_0.3),_15px_15px_rgba(0,_98,_90,_0.2),_20px_20px_rgba(0,_98,_90,_0.1),_25px_25px_rgba(0,_98,_90,_0.05)] transition-all md:mb-2 md:h-52 md:grid-cols-[1fr,2fr] md:gap-0 md:transition-all md:ease-in-out md:hover:scale-105 lg:hover:cursor-pointer"
           key={project.name}
         >
           <div className="grid space-y-4 md:order-2 md:gap-2 md:space-y-3">
@@ -48,13 +49,15 @@ export default function Page() {
               ))}
             </ul>
           </div>
-          <Image
-            src={project.image}
-            alt={project.name}
-            width="200"
-            height="150"
-            className="md:order-1' mb-auto max-w-36 rounded-md object-fill"
-          />
+          <div className="relative mb-auto h-24 w-1/2 md:order-1 md:w-11/12">
+            <Image
+              src={project.image}
+              alt={project.name}
+              fill={true}
+              sizes="(max-width: 768px) 40vw, 20vw"
+              className="rounded-md object-cover"
+            />
+          </div>
         </div>
       ))}
     </div>

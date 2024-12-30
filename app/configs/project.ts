@@ -1,23 +1,12 @@
 export const config = [
   {
-    name: 'Ask PDF',
-    url: {
-      github: 'https://github.com/devSaifur/ask-pdf',
-      website: 'https://ask-pdf-saifur.vercel.app'
-    },
-    description:
-      'Ask PDF allows you to have conversations with any PDF document. Simply upload your file and start asking questions with the power of ai right away.',
-    image: '/images/ask-pdf.webp',
-    tech: ['Next.js', 'Typescript', 'Tailwind', 'PostgreSQL']
-  },
-  {
     name: 'The Next Shop',
     url: {
       github: 'https://github.com/devSaifur/next-shop',
       website: 'https://github.com/devSaifur/next-shop'
     },
     description:
-      'The Next Shop is a modern E-Commerce + Dashboard & CMS, with this dashboard store owners have the ability to mange products, view sells details and even customize how the store front looks',
+      'An E-Commerce + Dashboard & CMS, with this dashboard with ability to mange products, view sells details and even customize how the store front looks',
     image: '/images/the-next-store.webp',
     tech: ['Next.js', 'Typescript', 'Tailwind', 'PostgreSQL']
   },
@@ -28,19 +17,50 @@ export const config = [
       website: 'https://hippokit.vercel.app'
     },
     description:
-      '  A space operation management app for NASA! It can schedule a new mission and abort it if necessary. The front end is built with React,the back end is with NodeJS, and the data is managed in MongoDB.',
-    image: '/images/nasa-mission-control.webp',
+      'A Modern Fullstack E-Commerce Marketplace for Digital Products, build using Next.js and Payload CMS',
+    image: '/images/hippokit.webp',
     tech: ['React', 'Node', 'Tailwind', 'MongoDB']
   },
   {
-    name: 'The Wild Oasis',
+    name: 'Chat Space',
     url: {
-      github: 'https://github.com/devSaifur/the-wild-oasis',
-      website: 'https://the-wild-oasis-by-saifur.vercel.app'
+      github: 'https://github.com/devSaifur/chat-space',
+      website: 'https://chat-space.vercel.app'
     },
     description:
-      "A hotel insider app for the management team to manage the guests and its customers, It's built with React, Styled Component, and Supabase.",
-    image: '/images/the-wild-oasis.webp',
-    tech: ['React', 'Tailwind', 'Supabase']
+      'A real-time chat app built with websocket and fully scalable and secure.',
+    image: '/images/chat-space.webp',
+    tech: ['React', 'Node', 'PostgreSQL', 'Redis', 'RabbitMQ']
+  },
+  {
+    name: 'Pygen',
+    url: {
+      github: 'https://github.com/devSaifur/pygen',
+      website: 'https://github.com/devSaifur/pygen'
+    },
+    description:
+      'A static site generator written in Python, similar to Jekyll, Hugo, Astro etc',
+    image: '/placeholder.svg',
+    tech: ['Python']
+  },
+  {
+    name: 'saifur.dev',
+    url: {
+      github: 'https://github.com/devSaifur/saifur.dev',
+      website: 'https://saifur.vercel.app'
+    },
+    description: 'My personal website, built with Next.js',
+    image: '/images/saifur.dev.webp',
+    tech: ['Next.js', 'Typescript', 'Tailwind', 'Framer Motion']
+  },
+  {
+    name: 'Asteroids',
+    url: {
+      github: 'https://github.com/devSaifur/asteroids',
+      website: 'https://github.com/devSaifur/asteroids'
+    },
+    description: 'A simple space game built with python and pygame',
+    image: '/images/asteroids.webp',
+    tech: ['Python', 'Pygame']
   }
 ]
