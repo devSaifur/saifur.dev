@@ -22,10 +22,10 @@ export const config = [
     tech: ['Next.js', 'Typescript', 'Tailwind', 'PostgreSQL']
   },
   {
-    name: 'Nasa Mission Control',
+    name: 'Hippokit',
     url: {
-      github: 'https://github.com/devSaifur/nasa-mission-control',
-      website: 'https://github.com/devSaifur/nasa-mission-control'
+      github: 'https://github.com/devSaifur/hippokit',
+      website: 'https://hippokit.vercel.app'
     },
     description:
       '  A space operation management app for NASA! It can schedule a new mission and abort it if necessary. The front end is built with React,the back end is with NodeJS, and the data is managed in MongoDB.',

@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #ca8a04 #134e4a;
-}
-
-html,
-body {
-  box-sizing: border-box;
-  scrollbar-gutter: stable;
-}
-
 h1,
 h2,
 h3,
@@ -42,8 +31,13 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+html {
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: #ca8a04 #134e4a;
+  overflow-y: scroll;
+}
+
+.blog-title {
+  view-transition-name: blog-title;
 }

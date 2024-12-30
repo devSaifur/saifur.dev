@@ -35,7 +35,10 @@ export function Navbar() {
 
   return (
     <motion.div
-      className="fixed left-0 right-0 top-3 z-50 flex justify-center"
+      className={cn(
+        'fixed left-0 right-0 top-3 z-50 flex justify-center',
+        pathname.includes('/blogs/') ? 'invisible' : 'visible'
+      )}
       variants={{
         visible: { y: 0 },
         hidden: { y: '-120%' }

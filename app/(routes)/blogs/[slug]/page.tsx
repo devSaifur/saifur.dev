@@ -1,4 +1,4 @@
-import type { Metadata, ResolvingMetadata } from 'next'
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { allPosts } from 'content-collections'
 
@@ -46,7 +46,9 @@ export default async function Page({
   return (
     <main className="mx-auto flex max-w-7xl flex-col px-8 py-8 md:px-14 md:py-12 lg:py-20 lg:pl-60">
       <article className="prose lg:prose-xl prose-h2:text-slate-300 prose-p:text-slate-300">
-        <h1 className="text-3xl font-bold text-white">{post.title}</h1>
+        <h1 className="blog-title text-3xl font-bold text-white">
+          {post.title}
+        </h1>
         <div
           dangerouslySetInnerHTML={{
             __html: post.html
