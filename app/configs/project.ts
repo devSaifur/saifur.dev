@@ -25,7 +25,7 @@ export const config = [
     name: 'Chat Space',
     url: {
       github: 'https://github.com/devSaifur/chat-space',
-      website: 'https://chat-space.vercel.app'
+      website: 'https://github.com/devSaifur/chat-space'
     },
     description:
       'A real-time chat app built with websocket and fully scalable and secure.',
