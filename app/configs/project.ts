@@ -22,6 +22,17 @@ export const config = [
     tech: ['React', 'Node', 'Tailwind', 'MongoDB']
   },
   {
+    name: 'Keeper',
+    url: {
+      github: 'https://github.com/devSaifur/keeper',
+      website: 'https://keeper-text.vercel.app'
+    },
+    description:
+      'A note taking app with rich text editor has a local first approach so everything feels snappy',
+    image: '/images/keeper.webp',
+    tech: ['Next.js', 'Tailwind', 'IndexDB', 'SQLite']
+  },
+  {
     name: 'Chat Space',
     url: {
       github: 'https://github.com/devSaifur/chat-space',
